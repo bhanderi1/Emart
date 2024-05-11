@@ -112,7 +112,7 @@
   font-style: italic;
 }
 
-/* navbar css */
+/*----------------- navbar css------------------ */
 
 * {
   font-family: "Poppins";
@@ -162,7 +162,9 @@
 .dropdown-menu {
   animation: slidedown 400ms ease-in-out forwards;
 }
-
+.navbar-expand-xl .navbar-nav .dropdown-menu{
+  margin-top: 12px;
+}
 @keyframes slidedown {
   0% {
     opacity: 0;
@@ -175,33 +177,9 @@
   }
 }
 
-/* .animated-text:hover{
-  background-color: transparent;
-  margin-left: 12px;
-}   
-
-.animated-text{
-  transition: margin-left 250ms ease-out;
-} */
-
-
 /*-------------------- Shop by Categories---------------- */
 .contain-text:hover .hover-text {
   display: block;
-}
-
-.arrow-icon:hover {
-  animation: FadeAndMove 400ms ease-in;
-}
-
-@keyframes FadeAndMove {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(15px)
-  }
 }
 
 .img-con {
@@ -230,11 +208,15 @@
   margin-top: -10px;
 }
 /*-----------------Interior Plant ---------------*/
-.primary-img:hover{
+.primary-img:hover img{
   transform: scale(1.1);
 }
-.primary-img{
-   transition: transform 2s ease-in-out;
+.primary-img img{
+   transition: transform 1.5s ease-in-out;
+}
+
+.primary-img:hover .shop-icon{
+  opacity: 1;
 }
 
 .interior-img {
@@ -244,7 +226,7 @@
 @keyframes slideUp {
   0% {
     opacity: 0;
-    transform: translateY(500px);
+    transform: translateY(300px);
   }
 
   100% {
@@ -252,4 +234,31 @@
     transform: translateY(0);
   }
 }
+
+.shop-icon{
+  opacity: 0;
+} 
+ .shop-icon:hover{
+  opacity: 1!important;
+}
+.icon-1:hover {
+  background-color: black!important;
+}
+.icon-1:hover a{
+  filter: invert(100%) sepia(1);  
+}
+/* ---------------Gardening Tools-------------- */
+.shop-now:hover{
+  background-color: black!important;
+  color: white!important;
+}
+.gardening{
+  height: inherit;
+}
+
+
+
+
+
+
 

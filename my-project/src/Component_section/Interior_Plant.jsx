@@ -8,7 +8,7 @@ import Cart from '../assets/Cart.svg'
 
 const Interior_Plant = () => {
   return (
-    <div className='continer flex justify-center py-[50px] max-xl:p-0 overflow-hidden'>
+    <div className='continer flex justify-center py-[40px] max-xl:p-0 overflow-hidden'>
       <Container>
         <div className='flex justify-center'>
           <div className='text-center'>
@@ -17,44 +17,45 @@ const Interior_Plant = () => {
           </div>
         </div>
 
-        <div className='max-sm:py-[30px] py-[50px] '>
-          <section className='flex max-md:block   m-auto justify-between overflow-hidden'>
+        <div className='max-sm:py-[30px] py-[50px]'>
+          <section className='flex max-md:block   m-auto justify-between overflow-hidden '>
 
             <section className='w-[40%] max-md:w-[100%] max-md:mb-[20px] interior-img top-0 ms-2'>
-              <img decoding="async" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plant-gallery-left-img.webp" alt="plant-gallery-left-img" loading="lazy" className="hover:-ms-[12px] duration-300 ease-in-out" />
+              <img decoding="async" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plant-gallery-left-img.webp" alt="plant-gallery-left-img" loading="lazy" className="hover:-ms-[15px] duration-300 ease-in-out" />
             </section>
-
             <section className='w-[57%] pl-5 max-md:block max-md:w-[100%] max-md:p-0 '>
               <div className='flex flex-wrap row '>
 
-                <div className='col-6 col-md-4 px-2 col-xs-6 relative'>
-                  <div className='absolute right-2  p-2 z-10'>
-                    <span className='text-white bg-black px-2 '>-20%</span>
-                    <div className='p-2'>
-                      <div className='p-[10px] bg-white rounded-full'>
-                        <a href="">
-                         <img src={heart} alt="" />
-                        </a>
+              <div className='col-6 col-md-4 px-2 col-xs-6 relative'>
+                  <div className='absolute right-5 top-3 z-10 max-md:hidden'>
+                    <span className='text-white bg-black px-2'>-20%</span>
+                  </div>
+                  <div className='relative primary-img'>
+                    <div className='overflow-hidden relative'>
+                      <img decoding="async" loading="lazy" alt="custom-image"src="	https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Monstera.webp" />
+                    </div>
+                    <div className='absolute left-0 top-0 z-10 shop-icon'>
+                      <div className='p-3'>
+                        <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                          <a href="" className=''>
+                            <img src={heart} alt="" height={16} width={16} />
+                          </a>
+                        </div>
+                        <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                          <a href="">
+                            <img src={Eyes} alt="" height={16} width={16} />
+                          </a>
+                        </div>
+                        <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
+                          <a href="">
+                            <img src={Cart} alt="" height={8} width={12} />
+                          </a>
+                        </div>
                       </div>
-                      <div className='p-[10px] bg-white rounded-full'>
-                        <a href="">
-                          <img src={Eyes} alt="" />
-                        </a>
-                      </div>
-                      <div className='p-[10px] flex justify-center bg-white rounded-full'>
-                        <a href="">
-                          <img src={Cart} alt="" />
-                        </a>
-                      </div>
-
                     </div>
                   </div>
-
-                  <div className='overflow-hidden'>
-                    <img decoding="async" alt="custom-image" class="primary-img" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Monstera.webp" />
-                  </div>
-                  <div className='text-center leading-10 p-4 max-md:p-1'>
-                    <h5>Monstera plant</h5>
+                  <div className='text-center leading-10 px-[12px] py-[23px] max-md:px-0 max-sm:py-[20px]'>
+                    <h5>Monstera Plant</h5>
                     <p className='text-muted '>
                       <del className='pr-[8px]'>$60</del>
                       <span>$48</span>
@@ -63,15 +64,36 @@ const Interior_Plant = () => {
                 </div>
 
                 <div className='col-6 col-md-4 px-2 col-xs-6 relative'>
-                  <div className='absolute right-2 p-2 z-10'>
+                  <div className='absolute right-5 top-3 z-10 max-md:hidden'>
                     <span className='text-white bg-black px-2'>-20%</span>
                   </div>
-                  <div className="overflow-hidden">
-                    <img decoding="async" loading="lazy" alt="custom-image" class="primary-img" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Haworthia.webp" />
+                  <div className='relative primary-img'>
+                    <div className='overflow-hidden relative'>
+                      <img decoding="async" loading="lazy" alt="custom-image"src="	https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Haworthia.webp" />
+                    </div>
+                    <div className='absolute left-0 top-0 z-10 shop-icon'>
+                      <div className='p-3'>
+                        <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                          <a href="" className=''>
+                            <img src={heart} alt="" height={16} width={16} />
+                          </a>
+                        </div>
+                        <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                          <a href="">
+                            <img src={Eyes} alt="" height={16} width={16} />
+                          </a>
+                        </div>
+                        <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
+                          <a href="">
+                            <img src={Cart} alt="" height={8} width={12} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className='text-center leading-10 p-4 max-md:p-1 '>
-                    <h5>Haworthia</h5>
-                    <p className='text-muted'>
+                  <div className='text-center leading-10 px-[12px] py-[23px] max-md:px-0 max-sm:py-[20px]'>
+                    <h5>Hawothia</h5>
+                    <p className='text-muted '>
                       <del className='pr-[8px]'>$87</del>
                       <span>$70</span>
                     </p>
@@ -79,31 +101,73 @@ const Interior_Plant = () => {
                 </div>
 
                 <div className='col-6 col-md-4 px-2 col-xs-6 relative'>
-                  <div className='absolute right-2 p-2 z-10'>
+                  <div className='absolute right-5 top-3 z-10 max-md:hidden'>
                     <span className='text-white bg-black px-2'>-21%</span>
                   </div>
-                  <div className="overflow-hidden">
-                    <img decoding="async" loading="lazy" alt="custom-image" class="primary-img" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-nest-fern-01.webp" />
+                  <div className='relative primary-img'>
+                    <div className='overflow-hidden relative'>
+                      <img decoding="async" loading="lazy" alt="custom-image"src="	https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-nest-fern-01.webp" />
+                    </div>
+                    <div className='absolute left-0 top-0 z-10 shop-icon'>
+                      <div className='p-3'>
+                        <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                          <a href="" className=''>
+                            <img src={heart} alt="" height={16} width={16} />
+                          </a>
+                        </div>
+                        <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                          <a href="">
+                            <img src={Eyes} alt="" height={16} width={16} />
+                          </a>
+                        </div>
+                        <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
+                          <a href="">
+                            <img src={Cart} alt="" height={8} width={12} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className='text-center leading-10 p-4 max-md:p-1'>
+                  <div className='text-center leading-10 px-[12px] py-[23px] max-md:px-0 max-sm:py-[20px]'>
                     <h5>Bird's nest fern</h5>
-                    <p className='text-muted'>
-                      <del className='pr-[8px]'>$68</del>
+                    <p className='text-muted '>
+                      <del className='pr-[8px]'>$60</del>
                       <span>$54</span>
                     </p>
                   </div>
                 </div>
 
                 <div className='col-6 col-md-4 px-2 col-xs-6 relative'>
-                  <div className='absolute right-2 p-2 z-10'>
+                  <div className='absolute right-5 top-3 z-10 max-md:hidden'>
                     <span className='text-white bg-black px-2'>-11%</span>
                   </div>
-                  <div className="overflow-hidden">
-                    <img decoding="async" alt="custom-image" class="primary-img" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/peace-lily-02.webp" />
+                  <div className='relative primary-img'>
+                    <div className='overflow-hidden relative'>
+                      <img decoding="async" loading="lazy" alt="custom-image"src="	https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/peace-lily-02.webp" />
+                    </div>
+                    <div className='absolute left-0 top-0 z-10 shop-icon'>
+                      <div className='p-3'>
+                        <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                          <a href="" className=''>
+                            <img src={heart} alt="" height={16} width={16} />
+                          </a>
+                        </div>
+                        <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                          <a href="">
+                            <img src={Eyes} alt="" height={16} width={16} />
+                          </a>
+                        </div>
+                        <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
+                          <a href="">
+                            <img src={Cart} alt="" height={8} width={12} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className='text-center leading-10 p-4 max-md:p-1'>
+                  <div className='text-center leading-10 px-[12px] py-[23px] max-md:px-0 max-sm:py-[20px]'>
                     <h5>Peace lily</h5>
-                    <p className='text-muted'>
+                    <p className='text-muted '>
                       <del className='pr-[8px]'>$72</del>
                       <span>$64</span>
                     </p>
@@ -111,27 +175,68 @@ const Interior_Plant = () => {
                 </div>
 
                 <div className='col-6 col-md-4 px-2 col-xs-6 relative'>
-                  <div>
-                    <div className="overflow-hidden">
-                      <img decoding="async" loading="lazy" alt="custom-image" class="primary-img" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/barrel-cactus-01.webp" />
+                  <div className='relative primary-img'>
+                    <div className='overflow-hidden relative'>
+                      <img decoding="async" loading="lazy" alt="custom-image"src="	https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/barrel-cactus-01.webp" />
                     </div>
-                    <div className='text-center leading-10 p-4 max-md:p-1'>
-                      <h5>Barrel cactus</h5>
-                      <p className='text-muted '>
-                        <span>$67.00</span>
-                      </p>
+                    <div className='absolute left-0 top-0 z-10 shop-icon'>
+                      <div className='p-3'>
+                        <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                          <a href="" className=''>
+                            <img src={heart} alt="" height={16} width={16} />
+                          </a>
+                        </div>
+                        <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                          <a href="">
+                            <img src={Eyes} alt="" height={16} width={16} />
+                          </a>
+                        </div>
+                        <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
+                          <a href="">
+                            <img src={Cart} alt="" height={8} width={12} />
+                          </a>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                  <div className='text-center leading-10 px-[12px] py-[23px] max-md:px-0 max-sm:py-[20px]'>
+                    <h5>Barrel cactus</h5>
+                    <p className='text-muted '>
+                    <span>$67.00</span>
+                    </p>
                   </div>
                 </div>
 
+
                 <div className='col-6 col-md-4 px-2 col-xs-6 relative'>
-                  <div className='absolute right-2 p-2 z-10'>
+                  <div className='absolute right-5 top-3 z-10 max-md:hidden'>
                     <span className='text-white bg-black px-2'>-26%</span>
                   </div>
-                  <div className="overflow-hidden">
-                    <img decoding="async" loading="lazy" alt="custom-image" class="primary-img" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Snake-Plant.webp" />
+                  <div className='relative primary-img'>
+                    <div className='overflow-hidden relative'>
+                      <img decoding="async" loading="lazy" alt="custom-image"src="	https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Snake-Plant.webp" />
+                    </div>
+                    <div className='absolute left-0 top-0 z-10 shop-icon'>
+                      <div className='p-3'>
+                        <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                          <a href="" className=''>
+                            <img src={heart} alt="" height={16} width={16} />
+                          </a>
+                        </div>
+                        <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                          <a href="">
+                            <img src={Eyes} alt="" height={16} width={16} />
+                          </a>
+                        </div>
+                        <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
+                          <a href="">
+                            <img src={Cart} alt="" height={8} width={12} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className='text-center leading-10 p-4 max-md:p-1'>
+                  <div className='text-center leading-10 px-[12px] py-[23px] max-md:px-0 max-sm:py-[20px]'>
                     <h5>Snake plant</h5>
                     <p className='text-muted '>
                       <del className='pr-[8px]'>$54</del>
@@ -140,16 +245,12 @@ const Interior_Plant = () => {
                   </div>
                 </div>
 
-
-
-
-
               </div>
-
             </section>
           </section>
         </div>
       </Container>
+
 
     </div>
   )

@@ -1,10 +1,11 @@
 import React from 'react'
 import Container from 'react-bootstrap/esm/Container'
 
-const Navbar = () => {
+const Style_One_Nav
+ = () => {
   return (
     <div>
-            <div className='bg-[#c7b9b6] hidden xl:block '>
+        <div className='bg-[#cfd8dc] hidden xl:block '>
                 <div className=' flex  justify-center'>
                     <Container>
                 <div className='flex justify-between m-auto py-2 text-[15px]'>
@@ -35,9 +36,9 @@ const Navbar = () => {
                     </Container>
                 </div>
             </div>
-            {/* nabar */}
-        </div>
+    </div>
   )
 }
 
-export default Navbar
+export default Style_One_Nav
+

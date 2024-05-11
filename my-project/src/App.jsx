@@ -1,37 +1,33 @@
-
-
-import Shop_by_Categories from "./Component_section/Shop_by_Categories"
-import Header_Part from "./Navbar/Header_Part"
-import Main_Nabar from "./Navbar/Main_Nabar"
-import Navbar from "./Navbar/Navbar"
-import Interior_Plant from "./Component_section/Interior_Plant"
-import Service from "./Component_section/Service"
-import Gardening_Tools from "./Component_section/Gardening_Tools"
-import New_arrivals from "./Component_section/New_arrivals"
-import Footer from "./Footer/Footer"
+import React from 'react'
+import Home from './Pages/Home'
+import Style_One_Page from './Pages/Style_One_Page'
+import Style_Four_Page from './Pages/Style_Four_Page'
+import Wishlist_Page from './Pages/Wishlist_Page'
+import Cart_Page from './Pages/Cart_Page'
+import ChechOut_Page from './Pages/ChechOut_Page'
+import Contact_Tow_Page from './Pages/Contact_Tow_Page'
+import Bolg_Three_Page from './Pages/Bolg_Three_Page'
 
 
 
 
-function App() {
-
-
+const App = () => {
   return (
-    <>
-      <div>
-        <Navbar />
-        <Main_Nabar />
-        <Header_Part />
-        <Shop_by_Categories />
-        <Interior_Plant />
-        <Service />
-        <Gardening_Tools />
-        <New_arrivals />
-        <Footer />
-      </div>
+    <div>
+      <Home/>
+      <Style_One_Page/>
+      <Style_Four_Page/>
+      <Wishlist_Page/>
+      <Cart_Page/>
+      <ChechOut_Page/>
+      <Bolg_Three_Page/>
 
-    </>
+
+      <Contact_Tow_Page/>
+
+
+    </div>
   )
 }
-
 export default App
+
