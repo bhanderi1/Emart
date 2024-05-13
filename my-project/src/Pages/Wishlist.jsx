@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/esm/Container'
 
 const Wishlist = () => {
   return (
-    <div>
+    <div className='bg-gradient-to-l from-[#e8f3fc]  to-[#f8fafc]'>
       <Container>
         <div className='py-[150px]'>
           <div className='mb-[50px] shadow-2xl shodow-gray-700'>

@@ -9,8 +9,6 @@ const Blog_Three = () => {
                 <div className='mb-[30px]'>
                     <h1 className='text-[40px] font-semibold max-md:text-[20px]'>Blog Grid View </h1>
                 </div>
-
-
                 <section className='flex justify-center'>
                     <div className='row flex flex-wrap max-lg:block max-lg:w-full max-lg:justify-center'>
                         <article className='grid col col-lg-4 px-[15px] max-lg:block max-lg:w-[100%] max-lg:px-0'>

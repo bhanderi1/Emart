@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux'
-import ProductReducer from '../Product_Data/ProductRedux/Product_Reducer'
-import Reducer from '../Product_Data/Redux/Reducer'
+import Reducer from './Redux/Reducer'
+import ProductReducer from './ProductRedux/ProductReducer'
 
-const RootReducer = combineReducers({
+const RootReducer =combineReducers({
     Reducer,
     ProductReducer
 })

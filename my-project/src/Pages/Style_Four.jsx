@@ -1,8 +1,8 @@
 import React from 'react'
 import Container from 'react-bootstrap/esm/Container'
-import heart from '../../assets/heart.svg'
-import Cart from '../../assets/Cart.svg'
-import Eyes from '../../assets/Eyes.svg'
+import heart from '../assets/heart.svg'
+import Eyes from '../assets/Eyes.svg'
+import Cart from '../assets/Cart.svg'
 
 const Style_Four = () => {
   return (
@@ -18,14 +18,14 @@ const Style_Four = () => {
         <div className='flex flex-wrap m-auto col-xs-block relative'>
 
           <div className='col-6 col-md-3 relative p-2'>
-              <div className='absolute right-5  top-5 z-10 max-md:hidden'>
+              <div className='absolute right-5  top-5 z-1 max-md:hidden'>
                 <span className='text-white bg-black px-2 '>-12%</span>
               </div>
             <div className='relative primary-img'>
               <div className='overflow-hidden relative'>
                 <img decoding="async" loading="lazy" alt="custom-image"  src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp" />
               </div>
-              <div className=' absolute bottom-0  z-10 w-[100%] h-[100%] shop-icon'>
+              <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
                     <a href="" className=''>
@@ -55,14 +55,14 @@ const Style_Four = () => {
           </div>
 
           <div className='col-6 col-md-3 relative p-2'>
-              <div className='absolute right-5  top-5 z-10 max-md:hidden'>
+              <div className='absolute right-5  top-5 z-1 max-md:hidden'>
                 <span className='text-white bg-black px-2 '>-12%</span>
               </div>
             <div className='relative primary-img'>
               <div className='overflow-hidden relative'>
                 <img decoding="async" loading="lazy" alt="custom-image"  src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp" />
               </div>
-              <div className=' absolute bottom-0  z-10 w-[100%] h-[100%] shop-icon'>
+              <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
                     <a href="" className=''>
@@ -92,14 +92,14 @@ const Style_Four = () => {
           </div>
 
           <div className='col-6 col-md-3 relative p-2'>
-              <div className='absolute right-5  top-5 z-10 max-md:hidden'>
+              <div className='absolute right-5  top-5 z-1 max-md:hidden'>
                 <span className='text-white bg-black px-2 '>-12%</span>
               </div>
             <div className='relative primary-img'>
               <div className='overflow-hidden relative'>
                 <img decoding="async" loading="lazy" alt="custom-image"  src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp" />
               </div>
-              <div className=' absolute bottom-0  z-10 w-[100%] h-[100%] shop-icon'>
+              <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
                     <a href="" className=''>
@@ -129,14 +129,14 @@ const Style_Four = () => {
           </div>
 
           <div className='col-6 col-md-3 relative p-2'>
-              <div className='absolute right-5  top-5 z-10 max-md:hidden'>
+              <div className='absolute right-5  top-5 z-1 max-md:hidden'>
                 <span className='text-white bg-black px-2 '>-12%</span>
               </div>
             <div className='relative primary-img'>
               <div className='overflow-hidden relative'>
                 <img decoding="async" loading="lazy" alt="custom-image"  src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp" />
               </div>
-              <div className=' absolute bottom-0  z-10 w-[100%] h-[100%] shop-icon'>
+              <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
                     <a href="" className=''>
@@ -166,14 +166,14 @@ const Style_Four = () => {
           </div>
 
           <div className='col-6 col-md-3 relative p-2'>
-              <div className='absolute right-5  top-5 z-10 max-md:hidden'>
+              <div className='absolute right-5  top-5 z-1 max-md:hidden'>
                 <span className='text-white bg-black px-2 '>-12%</span>
               </div>
             <div className='relative primary-img'>
               <div className='overflow-hidden relative'>
                 <img decoding="async" loading="lazy" alt="custom-image"  src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp" />
               </div>
-              <div className=' absolute bottom-0  z-10 w-[100%] h-[100%] shop-icon'>
+              <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
                     <a href="" className=''>
@@ -203,14 +203,14 @@ const Style_Four = () => {
           </div>
 
           <div className='col-6 col-md-3 relative p-2'>
-              <div className='absolute right-5  top-5 z-10 max-md:hidden'>
+              <div className='absolute right-5  top-5 z-1 max-md:hidden'>
                 <span className='text-white bg-black px-2 '>-12%</span>
               </div>
             <div className='relative primary-img'>
               <div className='overflow-hidden relative'>
                 <img decoding="async" loading="lazy" alt="custom-image"  src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp" />
               </div>
-              <div className=' absolute bottom-0  z-10 w-[100%] h-[100%] shop-icon'>
+              <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
                     <a href="" className=''>
@@ -240,14 +240,14 @@ const Style_Four = () => {
           </div>
 
           <div className='col-6 col-md-3 relative p-2'>
-              <div className='absolute right-5  top-5 z-10 max-md:hidden'>
+              <div className='absolute right-5  top-5 z-1 max-md:hidden'>
                 <span className='text-white bg-black px-2 '>-12%</span>
               </div>
             <div className='relative primary-img'>
               <div className='overflow-hidden relative'>
                 <img decoding="async" loading="lazy" alt="custom-image"  src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp" />
               </div>
-              <div className=' absolute bottom-0  z-10 w-[100%] h-[100%] shop-icon'>
+              <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
                     <a href="" className=''>
@@ -277,14 +277,14 @@ const Style_Four = () => {
           </div>
 
           <div className='col-6 col-md-3 relative p-2'>
-              <div className='absolute right-5  top-5 z-10 max-md:hidden'>
+              <div className='absolute right-5  top-5 z-1 max-md:hidden'>
                 <span className='text-white bg-black px-2 '>-12%</span>
               </div>
             <div className='relative primary-img'>
               <div className='overflow-hidden relative'>
                 <img decoding="async" loading="lazy" alt="custom-image"  src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp" />
               </div>
-              <div className=' absolute bottom-0  z-10 w-[100%] h-[100%] shop-icon'>
+              <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
                     <a href="" className=''>
@@ -314,14 +314,14 @@ const Style_Four = () => {
           </div>
 
           <div className='col-6 col-md-3 relative p-2'>
-              <div className='absolute right-5  top-5 z-10 max-md:hidden'>
+              <div className='absolute right-5  top-5 z-1 max-md:hidden'>
                 <span className='text-white bg-black px-2 '>-12%</span>
               </div>
             <div className='relative primary-img'>
               <div className='overflow-hidden relative'>
                 <img decoding="async" loading="lazy" alt="custom-image"  src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp" />
               </div>
-              <div className=' absolute bottom-0  z-10 w-[100%] h-[100%] shop-icon'>
+              <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
                     <a href="" className=''>
@@ -351,14 +351,14 @@ const Style_Four = () => {
           </div>
 
           <div className='col-6 col-md-3 relative p-2'>
-              <div className='absolute right-5  top-5 z-10 max-md:hidden'>
+              <div className='absolute right-5  top-5 z-1 max-md:hidden'>
                 <span className='text-white bg-black px-2 '>-12%</span>
               </div>
             <div className='relative primary-img'>
               <div className='overflow-hidden relative'>
                 <img decoding="async" loading="lazy" alt="custom-image"  src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp" />
               </div>
-              <div className=' absolute bottom-0  z-10 w-[100%] h-[100%] shop-icon'>
+              <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
                     <a href="" className=''>
@@ -388,14 +388,14 @@ const Style_Four = () => {
           </div>
 
           <div className='col-6 col-md-3 relative p-2'>
-              <div className='absolute right-5  top-5 z-10 max-md:hidden'>
+              <div className='absolute right-5  top-5 z-1 max-md:hidden'>
                 <span className='text-white bg-black px-2 '>-12%</span>
               </div>
             <div className='relative primary-img'>
               <div className='overflow-hidden relative'>
                 <img decoding="async" loading="lazy" alt="custom-image"  src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp" />
               </div>
-              <div className=' absolute bottom-0  z-10 w-[100%] h-[100%] shop-icon'>
+              <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
                     <a href="" className=''>
@@ -425,14 +425,14 @@ const Style_Four = () => {
           </div>
 
           <div className='col-6 col-md-3 relative p-2'>
-              <div className='absolute right-5  top-5 z-10 max-md:hidden'>
+              <div className='absolute right-5  top-5 z-1 max-md:hidden'>
                 <span className='text-white bg-black px-2 '>-12%</span>
               </div>
             <div className='relative primary-img'>
               <div className='overflow-hidden relative'>
                 <img decoding="async" loading="lazy" alt="custom-image"  src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp" />
               </div>
-              <div className=' absolute bottom-0  z-10 w-[100%] h-[100%] shop-icon'>
+              <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
                     <a href="" className=''>

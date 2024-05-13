@@ -19,7 +19,7 @@ const New_arrivals = () => {
                     <div className='flex row justify-between max-2xl:flex-wrap m-auto col-xs-block'>
 
                         <div className='col-6 col-lg-3 relative '>
-                            <div className='absolute right-5 top-3  z-10 max-md:hidden'>
+                            <div className='absolute right-5 top-3  z-1 max-md:hidden'>
                                 <span className='text-white bg-black px-2 '>-33%</span>
                             </div>
 
@@ -27,7 +27,7 @@ const New_arrivals = () => {
                                 <div className='overflow-hidden relative'>
                                     <img decoding="async" loading="lazy" alt="custom-image" src="	https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Snake-Plant.webp" />
                                 </div>
-                                <div className='absolute left-0 top-0 z-10 shop-icon'>
+                                <div className='absolute left-0 top-0 z-1 shop-icon'>
                                     <div className='p-4'>
                                         <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
                                             <a href="" className=''>
@@ -64,7 +64,7 @@ const New_arrivals = () => {
                                 <div className='overflow-hidden relative'>
                                     <img decoding="async" loading="lazy" alt="custom-image" src="	https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Monstera.webp" />
                                 </div>
-                                <div className='absolute left-0 top-0 z-10 shop-icon'>
+                                <div className='absolute left-0 top-0 z-1 shop-icon'>
                                     <div className='p-4'>
                                         <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
                                             <a href="" className=''>
@@ -93,7 +93,7 @@ const New_arrivals = () => {
                             </div>
                         </div>
                         <div className='col-6 col-lg-3 relative '>
-                            <div className='absolute right-5  top-3 z-10 max-md:hidden'>
+                            <div className='absolute right-5  top-3 z-1 max-md:hidden'>
                                 <span className='text-white bg-black px-2 '>-20%</span>
                             </div>
 
@@ -101,7 +101,7 @@ const New_arrivals = () => {
                                 <div className='overflow-hidden relative'>
                                     <img decoding="async" loading="lazy" alt="custom-image" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Haworthia.webp" />
                                 </div>
-                                <div className='absolute left-0 top-0 z-10 shop-icon'>
+                                <div className='absolute left-0 top-0 z-1 shop-icon'>
                                     <div className='p-4'>
                                         <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
                                             <a href="" className=''>
@@ -136,7 +136,7 @@ const New_arrivals = () => {
                                 <div className='overflow-hidden relative'>
                                     <img decoding="async" loading="lazy" alt="custom-image" src="	https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Monstera.webp" />
                                 </div>
-                                <div className='absolute left-0 top-0 z-10 shop-icon'>
+                                <div className='absolute left-0 top-0 z-1 shop-icon'>
                                     <div className='p-4'>
                                         <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
                                             <a href="" className=''>
@@ -166,7 +166,7 @@ const New_arrivals = () => {
 
                         <div className='max-lg:justify-start max-lg:flex'>
                             <div className='col-6 col-lg-3 relative pr-[20px] max-sm:pr-[10px]'>
-                                <div className='absolute right-8  top-3 z-10 max-md:hidden'>
+                                <div className='absolute right-8  top-3 z-1 max-md:hidden'>
                                     <span className='text-white bg-black px-2 '>-21%</span>
                                 </div>
 
@@ -174,7 +174,7 @@ const New_arrivals = () => {
                                     <div className='overflow-hidden relative'>
                                         <img decoding="async" loading="lazy" alt="custom-image" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-nest-fern-01.webp" />
                                     </div>
-                                    <div className='absolute left-0 top-0 z-10 shop-icon'>
+                                    <div className='absolute left-0 top-0 z-1 shop-icon'>
                                         <div className='p-4'>
                                             <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
                                                 <a href="" className=''>

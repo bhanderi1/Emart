@@ -5,7 +5,7 @@
           "name" : "Bird's Nest Leslie",
           "price" : "$45.00",
           "d_price" : "$30.00",
-          "img" : "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp"
+          "img" : "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Monstera.webp"
       },
       {
           "id" : 2,
@@ -37,8 +37,9 @@
       {
           "id" : 6,
           "name" : "Peperomia Plans",
+          "price":"$45.00",
           "d_price" : "$57.00",
-          "img" : "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Rubber-Plant.webp"
+          "img" : "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Monstera.webp"
       },
       {
           "id" : 7,
@@ -51,7 +52,7 @@
           "id" : 8,
           "name" : "Succulent Plant",
           "d_price" : "$67.00",
-          "img" : "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Succulent-Plant.webp"
+          "img" : "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Monstera.webp"
       },
       {
           "id" : 9,
@@ -61,16 +62,24 @@
       },
       {
           "id" : 10,
-          "name" : "Philodendron Plant",
-          "d_price" : "$63.00",
-          "img" : "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Philodendron-Birkin-Plant.webp"
-      },
-      {
-          "id" : 11,
           "name" : "Snake Plant",
           "price" : "$54.00",
           "d_price" : "$40.00",
           "img" : "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Snake-Plant.webp"
-      }
+      },
+      {
+        "id" : 11,
+        "name" : "Snake Plant",
+        "price" : "$54.00",
+        "d_price" : "$40.00",
+        "img" : "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Snake-Plant.webp"
+    },
+    {
+        "id" : 12,
+        "name" : "Succulent Plant",
+        "d_price" : "$67.00",
+        "img" : "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Monstera.webp"
+    }
+      
   ]
 }

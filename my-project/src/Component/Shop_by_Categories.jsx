@@ -10,7 +10,7 @@ const Shop_by_Categories = () => {
                     <h1 className='text-[45px] max-md:text-[33px] font-[Jost] '>
                         Shop by Categories
                     </h1>
-                </div>o
+                </div>
                 <section className='flex mt-[30px] overflow-hidden'>
                     <div className='flex m-auto flex-wrap overflow-hidden'>
                         

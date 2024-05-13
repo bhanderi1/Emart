@@ -255,10 +255,23 @@
 .gardening{
   height: inherit;
 }
-
-
-
-
-
-
-
+.form-select {
+  --bs-form-select-bg-img:none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding:0;
+  background-color: none;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 16px 12px;
+  border: none;
+  border-radius: none;
+  transition: none;
+}
+.form-select:focus {
+  border-color: none;
+  /* outline: 0; */
+  box-shadow: none;
+}
