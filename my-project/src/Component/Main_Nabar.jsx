@@ -69,12 +69,12 @@ function Main_Navbar() {
 
               {/* Demo */}
               <NavDropdown title={
-                <div className='flex justify-between items-center drop font-semibold icon max-xl:border-b-[1px] translate-x-[543px]'>
+                <div className='flex justify-between items-center drop font-semibold icon max-xl:border-b-[1px] translate-x-[540px]'>
                   Demo<span ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-down arrow"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
                 </div> 
-              } show={demo} onMouseEnter={mouseenter} onMouseLeave={mouseout} className="-translate-x-[543px]">
+              } show={demo} onMouseEnter={mouseenter} onMouseLeave={mouseout} className="-translate-x-[540px] max-sm:translate-x-0">
                 <div className='h-[1px] bg-[#c7c8cb] max-xl:hidden'></div>
-                <section className='flex max:xl:justify-center items-center w-screen h-[500px] max-xl:ml-0 max-xl:w-block max-xl:h-auto m-auto max-xl:border-b-[1px] mt-[12px] absloute -left-[518px] '>
+                <section className='flex justify-evenly max-xl:justify-between items-center w-screen h-[500px] max-xl:ml-0 max-xl:w-block max-xl:h-auto m-auto max-xl:border-b-[1px] mt-[12px]'>
                   <div className='flex max-xl:block py-[50px] max-xl:py-0 pl-[50px] justify-center'>
 
                     <div className='max-xl:hidden max-xl:ml-0 '>
@@ -87,7 +87,7 @@ function Main_Navbar() {
                       </div>
                     </div>
 
-                    <div className='leading-8 max-xl:leading-6 py-[60px] pl-[120px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 max-xl:p-0 max-xl:pl-0'>
+                    <div className='leading-8 max-xl:leading-6 py-[60px] pl-[80px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 max-xl:p-0 max-xl:pl-0'>
                       <NavDropdown.Item href="#action2" className='text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out'> Fashion Hub </NavDropdown.Item>
                       <NavDropdown.Item href="#action3" className='text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out'> Kids Wear </NavDropdown.Item>
                       <NavDropdown.Item href="#action4" className='text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out leading-0'>Women <br className='max-xl:hidden ' /> Fashion </NavDropdown.Item>
@@ -97,7 +97,7 @@ function Main_Navbar() {
                     </div>
 
                     <div className='bg-[#c7c8cb] w-[1px] -mt-[15px] -mb-[16px] ml-10 max-xl:hidden'></div>
-                    <div className='py-[50px] pl-[120px] pr-[1px] max-xl:p-0 leading-8 max-xl:leading-6 max-xl:pl-0'>
+                    <div className='py-[50px] pl-[80px] pr-[1px] max-xl:p-0 leading-8 max-xl:leading-6 max-xl:pl-0'>
                       <NavDropdown.Item href="#action8" className='text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out'>
                         <NavLink to="/">
                           Plant Garden
@@ -111,7 +111,7 @@ function Main_Navbar() {
                     </div>
 
                     <div className='bg-[#c7c8cb] w-[1px] -mt-[15px] -mb-[16px] ml-10 max-xl:hidden'></div>
-                    <div className='py-[50px] pl-[120px] pr-[10px] max-xl:p-0 leading-8 max-xl:leading-6'>
+                    <div className='py-[50px] pl-[80px] pr-[10px] max-xl:p-0 leading-8 max-xl:leading-6'>
                       <NavDropdown.Item href="#action15" className='text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out'> Soap </NavDropdown.Item>
                       <NavDropdown.Item href="#action16" className='text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out'> Skin Care</NavDropdown.Item>
                       <NavDropdown.Item href="#action17" className='text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out'> Grocery Outlet <span className='text-white bg-red-500 px-2 py-0.3 rounded-full font-medium text-xs ml-[6px]'>New</span></NavDropdown.Item>
@@ -124,7 +124,7 @@ function Main_Navbar() {
                 <div className='h-[1px] bg-[#c7c8cb]  max-xl:hidden'></div>
 
                 <section className=' max-xl:hidden container'>
-                  <div className='flex  items-center justify-center py-[15px] '>
+                  <div className='flex  items-center justify-end py-[15px] pe-[250px]'>
                     <p className='text-danger flex'>Summer Sale 65% Off
                       <span>
                         <a href="#" className='text-muted ml-2 add'>Shop Now</a>
@@ -143,7 +143,7 @@ function Main_Navbar() {
                 </div>
               } show={Product} onMouseEnter={Productmouseenter} onMouseLeave={Productmouseout} className='-translate-x-[622px]'>
                 <div className='h-[1px] bg-[#c7c8cb] max-xl:hidden'></div>
-                <section className='w-screen flex max-xl:block items-center  max-xl:m-0 max-xl:w-auto max-xl:leading-6 m-auto max-xl:border-b-[1px] '>
+                <section className='w-screen flex max-xl:block items-center  max-xl:m-0 max-xl:w-auto max-xl:leading-6 m-auto max-xl:border-b-[1px] justify-evenly'>
                   <div className='flex max-xl:block'>
                     <div className='max-xl:hidden'>
                       <div className='py-[50px]  pr-[10px] '>
@@ -154,14 +154,14 @@ function Main_Navbar() {
                       </div>
                     </div>
                     <div className='max-xl:hidden'>
-                      <div className='py-[50px]  pr-[20px] pl-[20px]'>
+                      <div className='py-[50px]  pr-[20px] pl-[30px]'>
                         <img width="250px" height="350px" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/peace-lily-02.webp" alt="peace-lily-02" loading="lazy" />
                         <div className='pt-[20px] leading-6'>
                           <p className='text-base'>It's just a product of your fevered <br /> imagination!</p>
                         </div>
                       </div>
                     </div>
-                    <div className='py-[60px] pl-[60px] pr-[30px] max-xl:p-0'>
+                    <div className='py-[60px] pl-[40px] pr-[20px] max-xl:p-0'>
                       <div className='pt-1 pb-8 ml-2 max-xl:hidden'>
                         <img width="45" height="45" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/03/dress-02.png" alt="" loading="lazy" />
                       </div>
@@ -177,7 +177,7 @@ function Main_Navbar() {
                     </div>
                     <div className='bg-[#c7c8cb] w-[1px]  ml-10 max-xl:hidden'></div>
 
-                    <div className='py-[60px] pl-[60px] pr-[20px]  max-xl:p-0'>
+                    <div className='py-[60px] pl-[40px] pr-[20px]  max-xl:p-0'>
                       <div className='pt-1 pb-7 ml-2 max-xl:hidden'>
                         <img width="48" height="48" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/03/school-bag.png" alt="" loading="lazy" />
                       </div>
@@ -190,7 +190,7 @@ function Main_Navbar() {
                       <NavDropdown.Item href="#action29" className='text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out'><NavLink to="gridStyle"> Grid Style</NavLink></NavDropdown.Item>
                     </div>
                     <div className='bg-[#c7c8cb] w-[1px]  ml-10 max-xl:hidden'></div>
-                    <div className='py-[60px] pr-20 pl-[60px] max-xl:p-0'>
+                    <div className='py-[60px] pr-20 pl-[40px] max-xl:p-0'>
                       <div className='pt-1 pb-7 ml-2 max-xl:hidden'>
                         <img width="48" height="48" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/03/chair-1.png" alt="" loading="lazy" />
                       </div>
@@ -201,8 +201,8 @@ function Main_Navbar() {
                   </div>
                 </section>
                 <div className='h-[1px] bg-[#c7c8cb]  max-xl:hidden'></div>
-                <section className=' max-xl:hidden'>
-                  <div className='flex  items-center justify-center py-[15px] pl-[800px]'>
+                <section className=' max-xl:hidden container'>
+                  <div className='flex  items-center justify-end py-[15px] pe-[250px]'>
                     <p className='text-danger flex'>Summer Sale 65% Off
                       <span>
                         <a href="#" className='text-muted ml-2 add'>Shop Now</a>
@@ -222,7 +222,7 @@ function Main_Navbar() {
               } show={Shop} onMouseEnter={Shopmouseenter} onMouseLeave={Shoptmouseout} className='-translate-x-[718px]'>
 
                 <div className='h-[1px] bg-[#c7c8cb] max-xl:hidden'></div>
-                <section className='flex max:xl:justify-center items-center w-screen max-xl:ml-0 max-xl:w-block max-xl:h-auto m-auto max-xl:border-b-[1px]  '>
+                <section className='flex justify-evenly items-center w-screen max-xl:ml-0 max-xl:w-block max-xl:h-auto m-auto max-xl:border-b-[1px]  '>
                   <div className='flex max-xl:block '>
 
                     <div className='max-xl:ml-0  py-[60px] max-xl:p-0 pr-[60px] pl-[40px]'>
