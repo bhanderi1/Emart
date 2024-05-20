@@ -7,7 +7,7 @@ import Cart from '../assets/Cart.svg'
 const Style_Four = () => {
   return (
     <div>
-      <div className='bg-[#fcf7ef] '>
+      <div className='bg-[#fcf7ef] relative'>
         <div className='pt-[45px] pb-[40px] px-[15px]'>
           <Container>
             <h1 className='text-[29px] max-md:text-[25px] font-medium'>Product Style Four</h1>
@@ -28,19 +28,19 @@ const Style_Four = () => {
               <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="" className=''>
+                    <button href="">
                       <img src={heart} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Eyes} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] flex justify-center bg-white m-1  rounded-full icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Cart} alt="" height={8} width={12} />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -65,19 +65,19 @@ const Style_Four = () => {
               <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="" className=''>
+                    <button href="">
                       <img src={heart} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Eyes} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] flex justify-center bg-white m-1  rounded-full icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Cart} alt="" height={8} width={12} />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -102,19 +102,19 @@ const Style_Four = () => {
               <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="" className=''>
+                    <button href="">
                       <img src={heart} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Eyes} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] flex justify-center bg-white m-1  rounded-full icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Cart} alt="" height={8} width={12} />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -139,19 +139,19 @@ const Style_Four = () => {
               <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="" className=''>
+                    <button href="">
                       <img src={heart} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Eyes} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] flex justify-center bg-white m-1  rounded-full icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Cart} alt="" height={8} width={12} />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -176,19 +176,19 @@ const Style_Four = () => {
               <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="" className=''>
+                    <button href="">
                       <img src={heart} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Eyes} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] flex justify-center bg-white m-1  rounded-full icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Cart} alt="" height={8} width={12} />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -213,19 +213,19 @@ const Style_Four = () => {
               <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="" className=''>
+                    <button href="">
                       <img src={heart} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Eyes} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] flex justify-center bg-white m-1  rounded-full icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Cart} alt="" height={8} width={12} />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -250,19 +250,19 @@ const Style_Four = () => {
               <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="" className=''>
+                    <button href="">
                       <img src={heart} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Eyes} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] flex justify-center bg-white m-1  rounded-full icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Cart} alt="" height={8} width={12} />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -287,19 +287,19 @@ const Style_Four = () => {
               <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="" className=''>
+                    <button href="">
                       <img src={heart} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Eyes} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] flex justify-center bg-white m-1  rounded-full icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Cart} alt="" height={8} width={12} />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -324,19 +324,19 @@ const Style_Four = () => {
               <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="" className=''>
+                    <button href="">
                       <img src={heart} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Eyes} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] flex justify-center bg-white m-1  rounded-full icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Cart} alt="" height={8} width={12} />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -361,19 +361,19 @@ const Style_Four = () => {
               <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="" className=''>
+                    <button href="">
                       <img src={heart} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Eyes} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] flex justify-center bg-white m-1  rounded-full icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Cart} alt="" height={8} width={12} />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -398,19 +398,19 @@ const Style_Four = () => {
               <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="" className=''>
+                    <button href="">
                       <img src={heart} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Eyes} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] flex justify-center bg-white m-1  rounded-full icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Cart} alt="" height={8} width={12} />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -435,19 +435,19 @@ const Style_Four = () => {
               <div className=' absolute bottom-0  z-1 w-[100%] h-[100%] shop-icon'>
                 <div className='flex justify-center absolute bottom-[10px] w-[100%]'>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="" className=''>
+                    <button href="">
                       <img src={heart} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] bg-white rounded-full m-1 flex justify-center icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Eyes} alt="" height={16} width={16} />
-                    </a>
+                    </button>
                   </div>
                   <div className='p-[12px] flex justify-center bg-white m-1  rounded-full icon-1'>
-                    <a href="">
+                    <button href="">
                       <img src={Cart} alt="" height={8} width={12} />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>

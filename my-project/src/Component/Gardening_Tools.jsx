@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from 'react-bootstrap/esm/Container'
+import { NavLink } from 'react-router-dom';
 
 const Gardening_Tools = () => {
     return (
@@ -10,18 +11,18 @@ const Gardening_Tools = () => {
                 </div>
                 <Container className='flex items-start gardening'>
                     <div className='ms-auto max-w-[480px] max-md:right-auto flex items-center gardening'>
-                        <div > 
+                        <div >
                             <div className='max-md:block'>
                                 <h1 className='text-[40px] mb-[20px] text-white max-md:text-[30px] max-md:flex justify-center items-center '>
                                     <div className=''>
-                                        Find your perfect<br/>
+                                        Find your perfect<br />
                                         <span className='text-wrap flex'>gardening tools on best price</span>
                                     </div>
                                 </h1>
                                 <div className='mt-5 mb-3 max-md:flex justify-center'>
-                                    <a href="" className='inline-block py-[12px] px-[40px] font-semibold hover:-translate-y-[15px] duration-300 ease-in-out bg-white shop-now'>
+                                    <NavLink to="shop_now" className='inline-block py-[12px] px-[40px] font-semibold hover:-translate-y-[15px] duration-300 ease-in-out bg-white shop-now'>
                                         Shop Now
-                                    </a>
+                                    </NavLink>
                                 </div>
                             </div>
                         </div>

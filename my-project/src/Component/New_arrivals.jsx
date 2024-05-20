@@ -30,19 +30,19 @@ const New_arrivals = () => {
                                 <div className='absolute left-0 top-0 z-1 shop-icon'>
                                     <div className='p-4'>
                                         <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                                            <a href="" className=''>
+                                            <button>
                                                 <img src={heart} alt="" height={16} width={16} />
-                                            </a>
+                                            </button>
                                         </div>
                                         <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                                            <a href="">
+                                            <button>
                                                 <img src={Eyes} alt="" height={16} width={16} />
-                                            </a>
+                                            </button>
                                         </div>
                                         <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
-                                            <a href="">
+                                            <button onClick={() => dispatch(addToCart(item))}>
                                                 <img src={Cart} alt="" height={8} width={12} />
-                                            </a>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -67,19 +67,19 @@ const New_arrivals = () => {
                                 <div className='absolute left-0 top-0 z-1 shop-icon'>
                                     <div className='p-4'>
                                         <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                                            <a href="" className=''>
+                                            <button>
                                                 <img src={heart} alt="" height={16} width={16} />
-                                            </a>
+                                            </button>
                                         </div>
                                         <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                                            <a href="">
+                                            <button>
                                                 <img src={Eyes} alt="" height={16} width={16} />
-                                            </a>
+                                            </button>
                                         </div>
                                         <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
-                                            <a href="">
+                                            <button onClick={() => dispatch(addToCart(item))}>
                                                 <img src={Cart} alt="" height={8} width={12} />
-                                            </a>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -104,19 +104,19 @@ const New_arrivals = () => {
                                 <div className='absolute left-0 top-0 z-1 shop-icon'>
                                     <div className='p-4'>
                                         <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                                            <a href="" className=''>
+                                            <button>
                                                 <img src={heart} alt="" height={16} width={16} />
-                                            </a>
+                                            </button>
                                         </div>
                                         <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                                            <a href="">
+                                            <button>
                                                 <img src={Eyes} alt="" height={16} width={16} />
-                                            </a>
+                                            </button>
                                         </div>
                                         <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
-                                            <a href="">
+                                            <button onClick={() => dispatch(addToCart(item))}>
                                                 <img src={Cart} alt="" height={8} width={12} />
-                                            </a>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -139,19 +139,19 @@ const New_arrivals = () => {
                                 <div className='absolute left-0 top-0 z-1 shop-icon'>
                                     <div className='p-4'>
                                         <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                                            <a href="" className=''>
+                                            <button>
                                                 <img src={heart} alt="" height={16} width={16} />
-                                            </a>
+                                            </button>
                                         </div>
                                         <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                                            <a href="">
+                                            <button>
                                                 <img src={Eyes} alt="" height={16} width={16} />
-                                            </a>
+                                            </button>
                                         </div>
                                         <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
-                                            <a href="">
+                                            <button onClick={() => dispatch(addToCart(item))}>
                                                 <img src={Cart} alt="" height={8} width={12} />
-                                            </a>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -177,19 +177,19 @@ const New_arrivals = () => {
                                     <div className='absolute left-0 top-0 z-1 shop-icon'>
                                         <div className='p-4'>
                                             <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                                                <a href="" className=''>
+                                                <button>
                                                     <img src={heart} alt="" height={16} width={16} />
-                                                </a>
+                                                </button>
                                             </div>
                                             <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                                                <a href="">
+                                                <button>
                                                     <img src={Eyes} alt="" height={16} width={16} />
-                                                </a>
+                                                </button>
                                             </div>
                                             <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
-                                                <a href="">
+                                                <button onClick={() => dispatch(addToCart(item))}>
                                                     <img src={Cart} alt="" height={8} width={12} />
-                                                </a>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>

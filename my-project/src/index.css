@@ -163,7 +163,7 @@
   animation: slidedown 400ms ease-in-out forwards;
 }
 .navbar-expand-xl .navbar-nav .dropdown-menu{
-  margin-top: 12px;
+  margin-top: 10px;
 }
 @keyframes slidedown {
   0% {
@@ -244,7 +244,7 @@
 .icon-1:hover {
   background-color: black!important;
 }
-.icon-1:hover a{
+.icon-1:hover button{
   filter: invert(100%) sepia(1);  
 }
 /* ---------------Gardening Tools-------------- */
@@ -274,4 +274,8 @@
   border-color: none;
   /* outline: 0; */
   box-shadow: none;
+}
+.checkout:hover{
+  background-color: white!important;
+  color: black!important;
 }

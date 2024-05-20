@@ -13,12 +13,12 @@ const Shop_by_Categories = () => {
                 </div>
                 <section className='flex mt-[30px] overflow-hidden'>
                     <div className='flex m-auto flex-wrap overflow-hidden'>
-                        
+
                         <div className='p-3 grid col-md-6 col-xl-3 overflow-hidden'>
                             <div className='overflow-hidden'>
                                 <div className='img-con up'>
                                     <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/hover-image-1st.webp" alt="" />
-                                    <div className='relative  bg-white '>
+                                    <div className='relative  bg-white'>
                                         <div className='flex overlay justify-between absolute ps-2 py-3 pb-2 items-center'>
                                             <p className='text-[24px]'>Aloe Vera</p>
                                             <div className='w-16 flex justify-center hover:translate-x-[10px] duration-300 ease-in-out'>
@@ -30,7 +30,7 @@ const Shop_by_Categories = () => {
                             </div>
                         </div>
 
-                        <div className='relative  p-3 grid  col-md-6 col-xl-3'>
+                        <div className='relative  p-3 grid col-md-6 col-xl-3'>
                             <div className='overflow-hidden'>
                                 <div className='img-con up'>
                                     <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/hover-image-2nd.webp" alt="" />
