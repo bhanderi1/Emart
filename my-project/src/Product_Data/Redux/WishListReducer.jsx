@@ -5,14 +5,15 @@ const getWishlistDataFromLocalStorage = () => {
   return wishlistData ? JSON.parse(wishlistData) : [];
 };
 
-const WishlistReducer = (state = getWishlistDataFromLocalStorage(),action) => {};
-switch (action.type) {
-  case ADD_TO_WISHLIST:
-    const updatedWishlistAdd = [action.data, ...state];
-    localStorage.setItem("Wishlist", JSON.stringify(updatedWishlistAdd));
-    return updatedWishlistAdd;
+const WishlistReducer = (state = getWishlistDataFromLocalStorage(), action) => {
+  switch (action.type) {
+    case ADD_TO_WISHLIST:
+      const updatedWishlistAdd = [action.data, ...state];
+      localStorage.setItem("Wishlist", JSON.stringify(updatedWishlistAdd));
+      return updatedWishlistAdd;
 
-  default:return state;
+    default: return state;
+  }
 }
 
 export default WishlistReducer;
