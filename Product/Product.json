@@ -3,75 +3,97 @@
         {
             "id": 1,
             "name": "Bird's Nest Leslie",
-            "price": "$30.00",
-            "d_price": "$45.00",
+            "price": 30.00,
+            "d_price": 45.00,
+             "discount":"22%",
             "img": "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-nest-fern-01.webp"
         },
         {
             "id": 2,
             "name": "Monstera Plant",
-            "price": "$48.00",
-            "d_price": "$60.00",
+            "price": 48.00,
+            "d_price": 60.00,
+            "discount":"17%",
             "img": "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Monstera.webp"
         },
         {
             "id": 3,
             "name": "Haworthia",
-            "price": "$70.00",
-            "d_price": "$87.00",
+            "price": 70.00,
+            "d_price": 87.00,
+            "discount":"11%",
             "img": "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Haworthia.webp"
         },
         {
             "id": 4,
             "name": "Monstera Plant",
-            "price": "$60.00",
+            "price": 60.00,
+            "d_price": 68.00,
+            "discount":"10%",
             "img": "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Monstera.webp"
         },
         {
             "id": 5,
             "name": "Bird's Nest Fern",
-            "price": "$54.00",
-            "d_price": "$68.00",
+            "price": 54.00,
+            "d_price": 68.00,
+            "discount":"15%",
             "img": "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-nest-fern-01.webp"
         },
         {
             "id": 6,
             "name": "Bird's nest leslie",
-            "price": "$57.00",
-            "d_price": "$45.00",
+            "price": 57.00,
+            "d_price": 45.00,
+            "discount":"12%",
             "img": "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp"
         },
         {
             "id": 7,
             "name": "Peace Lily",
-            "price": "$64.00",
-            "d_price": "$72.00",
+            "price": 64.00,
+            "d_price": 72.00,
+            "discount":"22%",
             "img": "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/peace-lily-02.webp"
         },
         {
             "id": 8,
             "name": "Succulent Plant",
-            "price": "$67.00",
+            "price": 67.00,
+            "d_price": 70.00,
+            "discount":"7%",
             "img": "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Monstera.webp"
         },
         {
             "id": 9,
             "name": "Barrel Cactus",
-            "price": "$67.00",
+            "price": 67.00,
+            "d_price": 80.00,
+            "discount":"14%",
             "img": "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/barrel-cactus-01.webp"
         },
         {
             "id": 10,
             "name": "Snake Plant",
-            "price": "$40.00",
-            "d_price": "$54.00",
+            "price": 40.00,
+            "d_price": 54.00,
+            "discount":"21%",
             "img": "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Snake-Plant.webp"
         },
         {
             "id": 11,
+            "name": "Succulent Plant",
+            "price": 67.00,
+            "d_price": 80.00,
+            "discount":"16%",
+            "img": "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Monstera.webp"
+        },
+        {
+            "id": 12,
             "name": "Snake Plant",
-            "price": "$40.00",
-            "d_price": "$54.00",
+            "price": 40.00,
+            "d_price": 54.00,
+            "discount":"14%",
             "img": "https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Snake-Plant.webp"
         }
     ]

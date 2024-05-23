@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Container from 'react-bootstrap/esm/Container'
 import Form from 'react-bootstrap/Form';
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart } from '../Product_Data/Redux/Action'
+import { addToCart, addTowishlist } from '../Product_Data/Redux/Action'
 import { productData } from '../Product_Data/ProductRedux/ProductAction'
 import heart from '../assets/heart.svg'
 import Eyes from '../assets/Eyes.svg'
@@ -58,7 +58,7 @@ const Shop_Now = () => {
                 <>
                   <div key={item.id} className='col-6 col-lg-3 relative '>
                     <div className='absolute right-5 top-3  z-1 max-md:hidden'>
-                      <span className='text-white bg-black px-2 '>-33%</span>
+                      <span className='text-white bg-black px-2 '>{item.discount}</span>
                     </div>
                     <div className='relative primary-img'>
                       <div className='overflow-hidden relative'>
@@ -68,7 +68,7 @@ const Shop_Now = () => {
                         <div className='p-4'>
                           <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
                             <button 
-                            // onClick={()=> dispatch(addTowishlist(item))}
+                            onClick={()=> dispatch(addTowishlist(item))}
                             >
                               <img src={heart} alt="" height={16} width={16} />
                             </button>
@@ -89,8 +89,8 @@ const Shop_Now = () => {
                     <div className='text-center leading-10 px-[12px] py-[23px] max-md:px-0 max-sm:py-[15px]'>
                       <h5>{item.name}</h5>
                       <p className='text-muted '>
-                        <del className='pr-[8px]'>{item.d_price}</del>
-                        <span>{item.price}</span>
+                        <del className='pr-[8px]'>${item.d_price}</del>
+                        <span>${item.price}</span>
                       </p>
                     </div>
                   </div>

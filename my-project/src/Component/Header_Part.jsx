@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom';
 const Header_Part = () => {
   return (
     <div>
-      <Container className='mt-5 mb-10 max-xl:mb-4'>
-        <section className='flex row justify-between m-auto max-md:block'>
+      <Container className='mt-4 mb-10 max-xl:mb-4'>
+        <section className='flex justify-between m-auto max-md:block'>
           <div className='w-[36%] flex justify-center items-center max-md:w-[100%]'>
             <div className='text-center max-md:text-start'>
               <div>

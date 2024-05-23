@@ -1,24 +1,20 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
-import { removeToCart } from "../Product_Data/Redux/Action";
-import { productData } from "../Product_Data/ProductRedux/ProductAction";
+import { decrement, increment, removeToCart } from "../Product_Data/Redux/Action";
+import { NavLink } from 'react-router-dom';
 
 const Cart = () => {
 
   const cartData = useSelector((state) => state.Reducer);
-  const amount = cartData.length && cartData.map((item) => item.price).reduce((prev, next) => prev + next);
 
-  const [quantity, setQuantity] = useState(0)
-  const handleDecrement = () => {
-    if (quantity > 1) {
-      setQuantity(prevCount => prevCount - 1)
-    }
-  }
-  const handleIncrement = () => {
-    setQuantity(prevCount => prevCount + 1)
-  }
+  const dispatch = useDispatch()
+
+  const ProductAmount = cartData.reduce((total,item)=> total + item.price * item.quantity,0)
+
+  // const FinalTotal = ProductAmount+10
+
   return (
     <>
       <div className="bg-gradient-to-l from-[#e8f3fc]  to-[#f8fafc]">
@@ -31,11 +27,10 @@ const Cart = () => {
                 </p>
               </div>
               <button className="hover:-translate-y-[10px] duration-300 ease-in-out">
-                <a
-                  href=""
+                <NavLink to='shop_now'
                   className="text-white py-[13px] px-[30px] bg-black text-[17px] " >
                   Return To Shop
-                </a>
+                </NavLink>
               </button>
             </div>}
 
@@ -50,28 +45,30 @@ const Cart = () => {
                 </div>
               </div>
               <hr />
-              {cartData.map((item) => {
+              {cartData.flat().map((item) => {
                 return (
                   <div key={item.id}>
                     <div className="flex justify-betweenpt-[30px] items-center py-[30px] ">
                       <div className="flex col-6 items-center pl-[20px]">
-                        {/* <button  onClick={() => dispatch(removeToCart(item))}>remove</button> */}
+                        <button onClick={()=> dispatch(removeToCart(item.id))}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                        </button>
                         <img
-                          className="h-32  w-32 col-6"
+                          className="h-32 w-32 col-6 ml-[20px]"
                           src={item.img}
                           alt=""
                         />
                         <div className="col-6">{item.name}</div>
                       </div>
-                      <div className="col-2">{item.price}</div>
+                      <div className="col-2">${item.price}</div>
                       <div className="col-2 items-center flex justify-center">
-                        <div className="border-1 border-black py-[10px] w-[80%] ">
-                          <button onClick={handleDecrement} className="mx-[7px]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
-                          <button className="mx-[7px]">{quantity}</button>
-                          <button onClick={handleIncrement} className="mx-[7px]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+                        <div className="border-1 border-black py-[8px] w-[65%] ">
+                          <button onClick={()=> dispatch(decrement(item.id))} className="mx-[7px]">-</button>
+                          <button className="mx-[7px]">{item.quantity}</button>
+                          <button onClick={()=> dispatch(increment(item.id))} className="mx-[7px]">+</button>
                         </div>
                       </div>
-                      <div className="col-2">123</div>
+                      <div className="col-2">${item.price * item.quantity}</div>
                     </div>
                     <hr />
                   </div>
@@ -85,18 +82,18 @@ const Cart = () => {
 
             <div className="w-[30%] bg-white max-xl:w-[100%] mx-auto max-xl:mt-[30px]">
               <div className="p-[25px]">
-                <h4 className="my-[8px]">Cart Totals</h4>
+                <h4 className="my-[8px] text-[14px]">Cart Totals</h4>
                 <hr />
                 <div className="flex justify-between mt-[30px] mb-[20px]">
                   <span>Subtotal</span>
-                  {/* <span>{amount}</span> */}
+                  <span>${ProductAmount}</span>
                 </div>
                 <hr />
                 <div className="leading-10 my-[15px]">
                   <h1>Shipping</h1>
                   <div className="flex justify-between">
                     <span>Flat Rate:</span>
-                    <span></span>
+                    <span>$10.00</span>
                   </div>
                   <div>
                     Shipping to <span className="font-bold">CA</span>
@@ -106,7 +103,7 @@ const Cart = () => {
                 <hr />
                 <div className="flex justify-between my-[25px]">
                   <span>Total:</span>
-                  {/* <span>{amount}</span> */}
+                  <span>${ProductAmount+10}</span>
                 </div>
                 <div className="w-full py-[15px] text-center border-2 border-black hover:-translate-y-[15px] duration-300 ease-in-out bg-black text-white checkout">
                   <button>Proceed To Checkout</button>
