@@ -13,8 +13,9 @@ const Header_Part = () => {
                 <h1 className='text-[67px] mb-3 max-lg:text-[60px] max-md:text-[43px]'>Plant a tree for better world</h1>
                 <p className='text-muted px-3 '>Rectangle follower distribute device layer. Library hand ellipse device strikethrough.</p>
                 <div className='my-5'>
-                  <NavLink  to="shop_now">
-                    <button className='py-[12px] px-[40px] border-1 border-black font-semibold hover:bg-black hover:text-white hover:-translate-y-[20px] duration-300 ease-in-out'>Shop Now</button>
+                  <NavLink  to="/shop_now">
+                    <button className='py-[12px] px-[40px] border-1 border-black font-semibold hover:bg-black hover:text-white hover:-translate-y-[20px] duration-300 ease-in-out'>
+                    Shop Now</button>
                     </NavLink>
                 </div>
               </div>

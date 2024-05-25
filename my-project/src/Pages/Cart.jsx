@@ -27,7 +27,7 @@ const Cart = () => {
                 </p>
               </div>
               <button className="hover:-translate-y-[10px] duration-300 ease-in-out">
-                <NavLink to='shop_now'
+                <NavLink to='/shop_now'
                   className="text-white py-[13px] px-[30px] bg-black text-[17px] " >
                   Return To Shop
                 </NavLink>
@@ -49,12 +49,12 @@ const Cart = () => {
                 return (
                   <div key={item.id}>
                     <div className="flex justify-betweenpt-[30px] items-center py-[30px] ">
-                      <div className="flex col-6 items-center pl-[20px]">
+                      <div className="flex col-6 items-center pl-[20px] max-md:p-10">
                         <button onClick={()=> dispatch(removeToCart(item.id))}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
                         </button>
                         <img
-                          className="h-32 w-32 col-6 ml-[20px]"
+                          className="h-32 w-32 col-6 ml-[20px] "
                           src={item.img}
                           alt=""
                         />
@@ -62,7 +62,7 @@ const Cart = () => {
                       </div>
                       <div className="col-2">${item.price}</div>
                       <div className="col-2 items-center flex justify-center">
-                        <div className="border-1 border-black py-[8px] w-[65%] ">
+                        <div className="border-1 border-black py-[8px] w-[70%] ">
                           <button onClick={()=> dispatch(decrement(item.id))} className="mx-[7px]">-</button>
                           <button className="mx-[7px]">{item.quantity}</button>
                           <button onClick={()=> dispatch(increment(item.id))} className="mx-[7px]">+</button>

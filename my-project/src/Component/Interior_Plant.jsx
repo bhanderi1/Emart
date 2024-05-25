@@ -11,6 +11,7 @@ const Interior_Plant = () => {
   const dispatch = useDispatch()
   const data = useSelector((state) => state.ProductReducer)
 
+
 useEffect(()=>{
   dispatch(productData())
 },[])
@@ -31,13 +32,17 @@ useEffect(()=>{
             </section>
             <section className='w-[57%] pl-5 max-md:block max-md:w-[100%] max-md:p-0 '>
               <div className='flex flex-wrap row '>
-              <div className='col-6 col-md-4 px-2 col-xs-6 relative'>
+            {
+              data.flat().slice(0,6).map((item) =>{
+                return(
+                  <>
+              <div className='col-6 col-md-4 px-2 col-xs-6 relative' key={item.id}>
                   <div className='absolute right-5 top-3 z-1 max-md:hidden'>
-                    <span className='text-white bg-black px-2'>-20%</span>
+                    <span className='text-white bg-black px-2'>{item.discount}</span>
                   </div>
                   <div className='relative primary-img'>
                     <div className='overflow-hidden relative'>
-                      <img decoding="async" loading="lazy" alt="custom-image"src="	https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Monstera.webp" />
+                      <img decoding="async" loading="lazy" alt="custom-image" src={item.img}/>
                     </div>
                     <div className='absolute left-0 top-0 z-1 shop-icon'>
                       <div className='p-3'>
@@ -60,15 +65,15 @@ useEffect(()=>{
                     </div>
                   </div>
                   <div className='text-center leading-10 px-[12px] py-[23px] max-md:px-0 max-sm:py-[20px]'>
-                    <h5>Monstera Plant</h5>
+                    <h5>{item.name}</h5>
                     <p className='text-muted '>
-                      <del className='pr-[8px]'>$60</del>
-                      <span>$48</span>
+                      <del className='pr-[8px]'>${item.d_price}</del>
+                      <span>${item.price}</span>
                     </p>
                   </div>
                 </div>
 
-                <div className='col-6 col-md-4 px-2 col-xs-6 relative'>
+                {/* <div className='col-6 col-md-4 px-2 col-xs-6 relative'>
                   <div className='absolute right-5 top-3 z-1 max-md:hidden'>
                     <span className='text-white bg-black px-2'>-20%</span>
                   </div>
@@ -247,7 +252,11 @@ useEffect(()=>{
                       <span>$40</span>
                     </p>
                   </div>
-                </div>
+                </div> */}
+                </>
+            )
+              })
+            }
               </div>
             </section>
           </section>

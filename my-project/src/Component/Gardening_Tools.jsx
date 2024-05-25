@@ -20,7 +20,7 @@ const Gardening_Tools = () => {
                                     </div>
                                 </h1>
                                 <div className='mt-5 mb-3 max-md:flex justify-center'>
-                                    <NavLink to="shop_now" className='inline-block py-[12px] px-[40px] font-semibold hover:-translate-y-[15px] duration-300 ease-in-out bg-white shop-now'>
+                                    <NavLink to="/shop_now" className='inline-block py-[12px] px-[40px] font-semibold hover:-translate-y-[15px] duration-300 ease-in-out bg-white shop-now'>
                                         Shop Now
                                     </NavLink>
                                 </div>

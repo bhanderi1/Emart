@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from 'postcss/lib/container'
+import Container from "react-bootstrap/esm/Container";
 
 const CheckOut = () => {
   return (

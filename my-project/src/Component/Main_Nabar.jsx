@@ -135,7 +135,7 @@ function Main_Navbar() {
                               New Product on the market
                             </p>
                             <p className="font-bold text-[16px] text-muted add">
-                              <NavLink to="shop_now">Shop Now</NavLink>
+                              <NavLink to="/shop_now">Shop Now</NavLink>
                             </p>
                           </div>
                         </div>
@@ -293,7 +293,7 @@ function Main_Navbar() {
                         Summer Sale 65% Off
                         <span>
                           <NavLink
-                            to="shop_now"
+                            to="/shop_now"
                             className="text-muted ml-2 add"
                           >
                             Shop Now
@@ -394,7 +394,7 @@ function Main_Navbar() {
                           href="#action22"
                           className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out"
                         >
-                          <NavLink to="styleOne">Style One</NavLink>
+                          <NavLink to="/styleOne">Style One</NavLink>
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action22"
@@ -412,7 +412,7 @@ function Main_Navbar() {
                           href="#action24"
                           className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out"
                         >
-                          <NavLink to="styleFour"> Style Four</NavLink>
+                          <NavLink to="/styleFour"> Style Four</NavLink>
                         </NavDropdown.Item>
                       </div>
                       <div className="bg-[#c7c8cb] w-[1px]  ml-10 max-xl:hidden"></div>
@@ -445,7 +445,7 @@ function Main_Navbar() {
                           href="#action27"
                           className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out"
                         >
-                          <NavLink to="carousal">Carousal</NavLink>
+                          <NavLink to="/carousal">Carousal</NavLink>
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action28"
@@ -457,7 +457,7 @@ function Main_Navbar() {
                           href="#action29"
                           className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out"
                         >
-                          <NavLink to="gridStyle"> Grid Style</NavLink>
+                          <NavLink to="/gridStyle"> Grid Style</NavLink>
                         </NavDropdown.Item>
                       </div>
                       <div className="bg-[#c7c8cb] w-[1px]  ml-10 max-xl:hidden"></div>
@@ -567,7 +567,7 @@ function Main_Navbar() {
                           className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out"
                         >
                           {" "}
-                          <NavLink to="col_Sidebar">
+                          <NavLink to="/col_Sidebar">
                             {" "}
                             4 Column + Side bar
                           </NavLink>{" "}
@@ -599,21 +599,21 @@ function Main_Navbar() {
                             href="#action39"
                             className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out"
                           >
-                            <NavLink to="wishlist"> Wishlist</NavLink>
+                            <NavLink to="/wishlist"> Wishlist</NavLink>
                           </NavDropdown.Item>
                           <NavDropdown.Item
                             href="#action40"
                             className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out"
                           >
                             {" "}
-                            <NavLink to="cart"> Cart </NavLink>
+                            <NavLink to="/cart"> Cart </NavLink>
                           </NavDropdown.Item>
                           <NavDropdown.Item
                             href="#action41"
                             className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out"
                           >
                             {" "}
-                            <NavLink to="checkout">Checkout</NavLink>{" "}
+                            <NavLink to="/checkout">Checkout</NavLink>{" "}
                           </NavDropdown.Item>
                         </div>
                       </div>
@@ -716,7 +716,7 @@ function Main_Navbar() {
                         Summer Sale 65% Off
                         <span>
                           <NavLink
-                            to="shop_now"
+                            to="/shop_now"
                             className="text-muted ml-2 add"
                           >
                             Shop Now
@@ -783,7 +783,7 @@ function Main_Navbar() {
                       href="#action55"
                       className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out"
                     >
-                      <NavLink to="blog_three">Blog Three</NavLink>
+                      <NavLink to="/blog_three">Blog Three</NavLink>
                     </NavDropdown.Item>
                   </div>
                 </NavDropdown>
@@ -830,7 +830,7 @@ function Main_Navbar() {
                       href="#action57"
                       className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out"
                     >
-                      <NavLink to="contact_Two">Contact Two</NavLink>
+                      <NavLink to="/contact_Two">Contact Two</NavLink>
                     </NavDropdown.Item>
                   </div>
                 </NavDropdown>
@@ -879,7 +879,7 @@ function Main_Navbar() {
               </div>
 
               <div className="max-xl:hidden ml-2 flex  max-xl:pr-0 pr-2 ">
-                <NavLink to="wishlist" className="flex ">
+                <NavLink to="/wishlist" className="flex ">
                   <span className="wishlist_products_counter_text">
                     <img
                       src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/heart-wishlist-icon.svg"
@@ -891,7 +891,7 @@ function Main_Navbar() {
               </div>
 
               <div className="flex max-md:-mr-2 ml-2 max-xl:pr-0 pr-2">
-                <NavLink to="cart">
+                <NavLink to="/cart">
                   <span className="flex">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
