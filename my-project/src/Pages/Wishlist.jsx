@@ -8,6 +8,18 @@ const Wishlist = () => {
   const wishlistData = useSelector((state) => state.WishlistReducer);
   const dispatch = useDispatch();
 
+  let date = new Date()
+
+
+  const Addwishlist = (item) => {
+    dispatch(addToCart(item))
+    dispatch(removeTowishlist(item.id))
+  }
+
+  const RemoveWishlist = (item) => {
+    dispatch(removeTowishlist(item.id))
+  }
+
   return (
     <div className="bg-gradient-to-l from-[#e8f3fc]  to-[#f8fafc] py-[70px]">
       <Container>
@@ -29,40 +41,45 @@ const Wishlist = () => {
         )}
 
         <div className="flex container mx-auto justify-between max-xl:block">
-          <div className="w-[100%] text-center table-fix bg-white max-xl:m-0 mx-[150px] p-[30px]">
-          <hr/>
+          <div className="w-[100%] text-center table-fix bg-white max-xl:m-0 mx-[150px] p-[30px] pb-[50px]">
+            <hr />
             <div>
-              <div className="flex justify-between pb-[20px] pt-[20px] px-[20px]">
-                <div className="col-4 font-medium">Products Name</div>
-                <div className="col-3 font-medium">Unit Price</div>
-                <div className="COL-2 font-medium">Date Added</div>
-                <div className="col-3 font-medium"></div>
+              <div className="flex justify-between pb-[20px] pt-[20px] px-[20px] max-md:justify-center">
+                <div className="col-4 font-medium max-md:w-[100%]">Products Name</div>
+                <div className="col-3 font-medium max-md:hidden">Unit Price</div>
+                <div className="Col-2 font-medium max-md:hidden">Date Added</div>
+                <div className="col-3 font-medium max-md:hidden"></div>
               </div>
             </div>
             <hr />
             {wishlistData.map((item) => {
               return (
                 <div key={item.id}>
-                  <div className="flex justify-between items-center py-[20px] text-gray-500">
-                    <div className="flex col-4 items-center ml-[15px]">
-                    <button onClick={()=> dispatch(removeTowishlist(item.id))}>
+                  <div className="flex justify-between items-center py-[20px] text-gray-500 max-md:block max-md:leading-10">
+
+                    <div className="flex col-4 pl-[15px] max-lg:p-0 max-md:block max-md:w-auto max-md:leading-10 items-center"> 
+                      <button onClick={() => RemoveWishlist(item)} className="flex max-md:justify-start max-md:px-[8px] max-md:pb-[15px]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-                    </button>
-                      <img className="h-28  w-28 col-2 ml-[25px]" src={item.img} alt="" />
-                      <div className="col-6">{item.name}</div>
+                      </button>
+                      <img className="h-28  w-28 col-2 ml-[25px] max-lg:h-20 max-lg:w-20 max-md:m-0" src={item.img} alt="" />
+                      <div className="col-6 max-md:w-auto flex max-md:justify-start ml-[20px] max-md:m-0">{item.name}</div>
                     </div>
-                    <div className="col-3">
+
+                    <div className="col-3 flex text-wrap justify-center max-md:w-auto max-md:justify-start">
                       <del className="pr-[12px]">${item.d_price}</del>
                       <span>${item.price}-20%</span>
                     </div>
-                    <div className="col-2 items-center flex justify-center">
-                       May 24, 2024
+
+                    <div className="col-2 items-center flex justify-center text-wrap max-md:w-auto max-md:justify-start">
+                    {date.toDateString()}
                     </div>
-                    <div className=" col-3 hover:-translate-y-[10px] duration-300 ease-in-out">
-                        <button className="text-white py-[13px] px-[30px] bg-black text-[17px]" onClick={()=> dispatch(addToCart(item))}>
-                          Add To Cart
-                        </button>
+
+                    <div className=" col-3 hover:-translate-y-[10px] duration-300 ease-in-out max-md:w-[100%] flex justify-center text-white py-[12px] px-[30px] bg-black text-[17px]  max-lg:py-[5px] checkout hover:border-2 hover:border-black">
+                      <button  onClick={() =>Addwishlist(item)} className="">
+                        Add To Cart
+                      </button>
                     </div>
+
                   </div>
                   <hr />
                 </div>

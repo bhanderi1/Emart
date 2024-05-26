@@ -15,7 +15,7 @@ const Shop_Now = () => {
 
   useEffect(() => {
     dispatch(productData())
-  },[])
+  }, [])
 
   return (
     <div className='pt-[70px]'>
@@ -45,9 +45,47 @@ const Shop_Now = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="none"><path d="M0 0h24v24H0z" opacity="0.05"></path><path fill="currentColor" d="M7.445 7.48V5.672L5.665 7.48h1.78zm1.09-4.42c.304.12.465.39.465.706v16.437a.784.784 0 01-.783.797.762.762 0 01-.772-.781V8.982H4.003a.832.832 0 01-.765-.204.759.759 0 01.002-1.105L7.652 3.23a.832.832 0 01.882-.17zm8.02 15.269l1.78-1.81h-1.78v1.81zm4.207-3.107a.76.76 0 01-.002 1.106l-4.412 4.442a.832.832 0 01-.882.17c-.305-.12-.466-.39-.466-.706V3.797c0-.432.332-.797.783-.797.45 0 .772.35.772.781v11.237h3.442a.833.833 0 01.765.204z"></path></g></svg>
               </div>
               <div className='col-3'>
-                <button></button>
-                <button></button>
-                <button></button>
+                <button className='me-[5px]'>
+                  <svg width="15" height="15" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.4" y="0.4" width="6.2" height="6.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
+                    <rect x="9.4" y="0.4" width="6.2" height="6.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
+                    <rect x="0.4" y="9.4" width="6.2" height="6.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
+                    <rect x="9.4" y="9.4" width="6.2" height="6.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
+                  </svg>
+                </button>
+                <button>
+                  <svg width="15" height="15" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.4" y="0.4" width="5.2" height="5.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
+                    <rect x="0.4" y="5.4" width="5.2" height="5.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
+                    <rect x="0.4" y="10.4" width="5.2" height="5.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
+                    <rect x="5.4" y="0.4" width="5.2" height="5.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
+                    <rect x="5.4" y="5.4" width="5.2" height="5.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
+                    <rect x="5.4" y="10.4" width="5.2" height="5.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
+                    <rect x="10.4" y="0.4" width="5.2" height="5.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
+                    <rect x="10.4" y="5.4" width="5.2" height="5.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
+                    <rect x="10.4" y="10.4" width="5.2" height="5.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
+                  </svg>
+                </button>
+                <button>
+                  {/* <svg width="15" height="15" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2.842" y="0.947" width="5.053" height="5.053" style='fill:white;stroke:black;stroke-width:0.63px;'></rect>
+                    <rect x="7.895" y="0.947" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                    <rect x="2.842" y="6" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                    <rect x="7.895" y="6" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                    <rect x="2.842" y="11.053" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                    <rect x="7.895" y="11.053" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                    <rect x="2.842" y="16.105" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                    <rect x="7.895" y="16.105" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                    <rect x="12.947" y="0.947" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                    <rect x="18" y="0.947" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                    <rect x="12.947" y="6" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                    <rect x="18" y="6" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                    <rect x="12.947" y="11.053" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                    <rect x="18" y="11.053" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                    <rect x="12.947" y="16.105" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                    <rect x="18" y="16.105" width="5.053" height="5.053" style="fill:white;stroke:black;stroke-width:0.63px;"></rect>
+                  </svg> */}
+                </button>
               </div>
             </div>
           </section>
@@ -67,8 +105,8 @@ const Shop_Now = () => {
                       <div className='absolute left-0 top-0 z-1 shop-icon'>
                         <div className='p-4'>
                           <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                            <button 
-                            onClick={()=> dispatch(addTowishlist(item))}
+                            <button
+                              onClick={() => dispatch(addTowishlist(item))}
                             >
                               <img src={heart} alt="" height={16} width={16} />
                             </button>
