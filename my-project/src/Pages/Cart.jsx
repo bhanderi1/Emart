@@ -22,7 +22,7 @@ const Cart = () => {
     <>
       <div className="bg-gradient-to-l from-[#e8f3fc]  to-[#f8fafc]">
         <Container className="py-[50px]">
-          {cartData.length === 0 &&
+          {cartData.length === 0 &&(
             <div className="py-[150px] mx-[60px]">
               <div className="mb-[50px] shadow-2xl shodow-gray-700">
                 <p className="py-[15px] bg-white text-[18px] px-[25px]">
@@ -35,10 +35,12 @@ const Cart = () => {
                   Return To Shop
                 </NavLink>
               </button>
-            </div>}
+            </div>)}
 
+           {
+            cartData.length >= 1 &&(
           <div className="flex container mx-auto justify-between max-xl:block">
-            <div className="w-[65%] text-center bg-white mx-auto max-xl:w-[100%] p-[20px]">
+            <div className="w-[65%] text-center bg-white mx-auto max-xl:w-[100%] p-[20px] shadow-2xl shodow-gray-700">
             <div className="mb-[20px]">
             <div className="border-2 border-dashed border-[#e9e9e9] p-[20px] text-start">
                 <p>Buy <span className="text-red-500">${ShippingRate}</span> more for get <span className="font-semibold">Free Shipping!!</span></p>
@@ -89,7 +91,7 @@ const Cart = () => {
               </div>
             </div>
 
-            <div className="w-[30%] bg-white max-xl:w-[100%] mx-auto max-xl:mt-[30px]">
+            <div className="w-[30%] bg-white max-xl:w-[100%] mx-auto max-xl:mt-[30px] shadow-2xl shodow-gray-700">
               <div className="p-[25px]">
                 <h4 className="my-[8px] text-[14px]">Cart Totals</h4>
                 <hr />
@@ -119,7 +121,8 @@ const Cart = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> )
+           }
         </Container>
       </div>
     </>

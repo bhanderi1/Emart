@@ -11,7 +11,7 @@ import Cart from '../assets/Cart.svg'
 const Shop_Now = () => {
   const dispatch = useDispatch()
   const data = useSelector((state) => state.ProductReducer)
-  console.log('maindata', data);
+  // console.log('maindata', data);
 
   useEffect(() => {
     dispatch(productData())
@@ -94,7 +94,7 @@ const Shop_Now = () => {
             {data.flat().map((item) => {
               return (
                 <>
-                  <div className='col-6 col-lg-3 relative' key={item.id}>
+                  <div key={item.id} className='col-6 col-lg-3 relative' >
                     <div className='absolute right-5 top-3  z-1 max-md:hidden'>
                       <span className='text-white bg-black px-2 '>{item.discount}</span>
                     </div>

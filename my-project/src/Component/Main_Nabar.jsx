@@ -6,6 +6,8 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { useAuth0 } from "@auth0/auth0-react";
+import { button } from "@nextui-org/theme";
 
 function Main_Navbar() {
   const result = useSelector((state) => state.Reducer);
@@ -55,6 +57,8 @@ function Main_Navbar() {
   const Contactmouseout = (e) => {
     setContact(false);
   };
+
+  const { loginWithRedirect , isAuthenticated , Logout} = useAuth0();
 
   return (
     <div className="flex justify-center bg-white sticky top-0 z-2 duration-[5s]">
@@ -861,7 +865,9 @@ function Main_Navbar() {
               </div>
 
               <div className="max-xl:pr-0 ml-2  pr-2">
-              <NavLink to='login'>
+              {isAuthenticated && <span>{user.name}</span>}
+              {isAuthenticated ? <button onClick={() => Logout({logoutParams:{returnTo: window.Location.origin}})}>Logout</button>:
+              <button onClick={()=> loginWithRedirect()}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="22"
@@ -877,7 +883,8 @@ function Main_Navbar() {
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
-              </NavLink>
+              </button>
+              }
               </div>
 
               <div className="max-xl:hidden ml-2 flex  max-xl:pr-0 pr-2 ">

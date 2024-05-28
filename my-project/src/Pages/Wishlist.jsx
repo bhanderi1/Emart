@@ -39,9 +39,10 @@ const Wishlist = () => {
             </div>
           </div>
         )}
-
+        {
+          wishlistData.length >= 1 &&(
         <div className="flex container mx-auto justify-between max-xl:block">
-          <div className="w-[100%] text-center table-fix bg-white max-xl:m-0 mx-[150px] p-[30px] pb-[50px]">
+          <div className="w-[100%] text-center table-fix bg-white max-xl:m-0 mx-[150px] p-[30px] pb-[50px] shadow-2xl shodow-gray-700">
             <hr />
             <div>
               <div className="flex justify-between pb-[20px] pt-[20px] px-[20px] max-md:justify-center">
@@ -74,11 +75,9 @@ const Wishlist = () => {
                     {date.toDateString()}
                     </div>
 
-                    <div className=" col-3 hover:-translate-y-[10px] duration-300 ease-in-out max-md:w-[100%] flex justify-center text-white py-[12px] px-[30px] bg-black text-[17px]  max-lg:py-[5px] checkout hover:border-2 hover:border-black">
-                      <button  onClick={() =>Addwishlist(item)} className="">
+                    <button className=" col-3 hover:-translate-y-[10px] duration-300 ease-in-out max-md:w-[100%] flex justify-center text-white py-[12px] px-[30px] bg-black text-[17px]  max-lg:py-[5px] checkout hover:border-2 hover:border-black" onClick={() =>Addwishlist(item)}>
                         Add To Cart
-                      </button>
-                    </div>
+                    </button>
 
                   </div>
                   <hr />
@@ -86,7 +85,8 @@ const Wishlist = () => {
               );
             })}
           </div>
-        </div>
+        </div>  )
+        }
       </Container>
     </div>
   );

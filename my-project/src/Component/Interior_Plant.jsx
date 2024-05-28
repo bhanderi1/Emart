@@ -11,10 +11,10 @@ const Interior_Plant = () => {
   const dispatch = useDispatch()
   const data = useSelector((state) => state.ProductReducer)
 
-
   useEffect(() => {
     dispatch(productData())
   }, [])
+
   return (
     <div className='continer flex justify-center py-[40px] max-xl:p-0 overflow-hidden'>
       <Container>
@@ -36,7 +36,7 @@ const Interior_Plant = () => {
                   data.flat().slice(0, 6).map((item) => {
                     return (
                       <>
-                        <div className='col-6 col-md-4 px-2 col-xs-6 relative' key={item.id}>
+                        <div key={item.id} className='col-6 col-md-4 px-2 col-xs-6 relative' >
                           <div className='absolute right-5 top-3 z-1 max-md:hidden'>
                             <span className='text-white bg-black px-2'>{item.discount}</span>
                           </div>

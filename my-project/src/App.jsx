@@ -16,8 +16,7 @@ import Contact_Two from './Pages/Contact_Two'
 import Shop_Now from './Pages/Shop_Now'
 import Carousal from './Pages/Carousal'
 import { BrowserRouter, Routes, Route, RouterProvider, createBrowserRouter } from 'react-router-dom'
-import User_Page from './Pages/User_Page'
-
+import User from './Pages/User'
 const App = () => {
   // const router = 
 
@@ -37,8 +36,7 @@ const App = () => {
           <Route path='wishlist' element={<Wishlist/>}/>
           <Route path='blog_three' element={<Blog_Three/>}/>
           <Route path='contact_Two' element={<Contact_Two/>}/>
-          
-          <Route path='login' element={<User_Page/>}/>
+      
           <Route path='/shop_now' element={<Shop_Now/>}/>
           <Route path='checkout' element={<CheckOut/>}/>
           <Route path='col_Sidebar' element={<Col_Sidebar/>}/>
