@@ -47,7 +47,7 @@ const Wishlist = () => {
             <div>
               <div className="flex justify-between pb-[20px] pt-[20px] px-[20px] max-md:justify-center">
                 <div className="col-4 font-medium max-md:w-[100%]">Products Name</div>
-                <div className="col-3 font-medium max-md:hidden">Unit Price</div>
+                <div className="col-3 font-medium max-md:hidden  ">Unit Price</div>
                 <div className="Col-2 font-medium max-md:hidden">Date Added</div>
                 <div className="col-3 font-medium max-md:hidden"></div>
               </div>
@@ -62,13 +62,13 @@ const Wishlist = () => {
                       <button onClick={() => RemoveWishlist(item)} className="flex max-md:justify-start max-md:px-[8px] max-md:pb-[15px]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
                       </button>
-                      <img className="h-28  w-28 col-2 ml-[25px] max-lg:h-20 max-lg:w-20 max-md:m-0" src={item.img} alt="" />
-                      <div className="col-6 max-md:w-auto flex max-md:justify-start ml-[20px] max-md:m-0">{item.name}</div>
+                      <img className="h-28  w-28 col-2 ml-[15px] max-lg:h-20 max-lg:w-20 max-md:m-0" src={item.img} alt="" />
+                      <div className="col-6 max-md:w-auto flex max-md:justify-start ml-[10px] max-md:m-0 text-wrap">{item.name}</div>
                     </div>
 
                     <div className="col-3 flex text-wrap justify-center max-md:w-auto max-md:justify-start">
-                      <del className="pr-[12px]">${item.d_price}</del>
-                      <span>${item.price}-20%</span>
+                      <del className="pr-[12px]">{item.d_price}</del>
+                      <span>{item.price}-20%</span>
                     </div>
 
                     <div className="col-2 items-center flex justify-center text-wrap max-md:w-auto max-md:justify-start">

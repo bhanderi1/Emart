@@ -7,9 +7,11 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useAuth0 } from "@auth0/auth0-react";
-import { button } from "@nextui-org/theme";
+import { CiLogout } from "react-icons/ci";
 
 function Main_Navbar() {
+  const { user,loginWithRedirect , isAuthenticated , logout} = useAuth0();
+
   const result = useSelector((state) => state.Reducer);
   const WishList = useSelector((state) => state.WishlistReducer);
   console.warn("HeaderData called", result);
@@ -58,7 +60,6 @@ function Main_Navbar() {
     setContact(false);
   };
 
-  const { loginWithRedirect , isAuthenticated , Logout} = useAuth0();
 
   return (
     <div className="flex justify-center bg-white sticky top-0 z-2 duration-[5s]">
@@ -617,7 +618,7 @@ function Main_Navbar() {
                             className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out"
                           >
                             {" "}
-                            <NavLink to="checkout">Checkout</NavLink>{" "}
+                            <NavLink to="/checkout">Checkout</NavLink>{" "}
                           </NavDropdown.Item>
                         </div>
                       </div>
@@ -865,8 +866,10 @@ function Main_Navbar() {
               </div>
 
               <div className="max-xl:pr-0 ml-2  pr-2">
-              {isAuthenticated && <span>{user.name}</span>}
-              {isAuthenticated ? <button onClick={() => Logout({logoutParams:{returnTo: window.Location.origin}})}>Logout</button>:
+              {isAuthenticated && <span className="hidden">{user.name}</span>}
+              {isAuthenticated ? (<button onClick={() => logout({logoutParams:{returnTo:window.location.origin}})}>
+              <CiLogout /></button>
+              ):(
               <button onClick={()=> loginWithRedirect()}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -884,6 +887,7 @@ function Main_Navbar() {
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
               </button>
+              )
               }
               </div>
 

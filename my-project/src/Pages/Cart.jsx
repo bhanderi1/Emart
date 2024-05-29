@@ -67,11 +67,10 @@ const Cart = () => {
                         <img
                           className="h-32 w-32 col-6 ml-[20px]  max-md:w-auto flex max-md:justify-start  max-md:m-0"
                           src={item.img}
-                          alt=""
-                        />
+                          alt="" />
                         <div className="col-6 max-md:w-auto flex max-md:justify-start ml-[20px] max-md:m-0">{item.name}</div>
                       </div>
-                      <div className="col-2 max-md:w-auto max-md:justify-start flex">${item.price}</div>
+                      <div className="col-2 max-md:w-auto max-md:justify-start justify-center flex">${item.price}.00</div>
                       <div className="col-2 items-center flex justify-center max-md:justify-start max-md:w-auto">
                         <div className="border-1 border-black py-[8px] px-[10px] max-md:py-0">
                           <button onClick={()=> dispatch(decrement(item.id))} className="mx-[7px]">-</button>
@@ -79,7 +78,7 @@ const Cart = () => {
                           <button onClick={()=> dispatch(increment(item.id))} className="mx-[7px]">+</button>
                         </div>
                       </div>
-                      <div className="col-2 max-md:w-auto max-md:justify-start flex justify-center">${item.price * item.quantity}</div>
+                      <div className="col-2 max-md:w-auto max-md:justify-start flex justify-center">${item.price * item.quantity}.00</div>
                     </div>
                     <hr />
                   </div>
@@ -97,7 +96,7 @@ const Cart = () => {
                 <hr />
                 <div className="flex justify-between mt-[30px] mb-[20px]">
                   <span>Subtotal</span>
-                  <span>${ProductAmount}</span>
+                  <span>${ProductAmount}.00</span>
                 </div>
                 <hr />
                 <div className="leading-10 my-[15px]">
@@ -114,11 +113,13 @@ const Cart = () => {
                 <hr />
                 <div className="flex justify-between my-[25px]">
                   <span>Total:</span>
-                  <span>${FinalTotal}</span>
+                  <span>${FinalTotal}.00</span>
                 </div>
+                <NavLink to='/checkout'>
                 <div className="w-full py-[15px] text-center border-2 border-black hover:-translate-y-[15px] duration-300 ease-in-out bg-black text-white checkout">
                   <button>Proceed To Checkout</button>
                 </div>
+              </NavLink>
               </div>
             </div>
           </div> )

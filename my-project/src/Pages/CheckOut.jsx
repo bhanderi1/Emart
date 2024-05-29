@@ -4,15 +4,15 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const CheckOut = () => {
   const CheckOutData = useSelector((state) => state.Reducer)
-  const dispatch = useDispatch()
 
   const ProductAmount = CheckOutData.reduce((total, item) => total + item.price * item.quantity, 0)
 
-  const FinalTotal = ProductAmount+10
+  const FinalTotal = ProductAmount + 10
   return (
+    <>
     <div className='bg-gradient-to-l from-[#e8f3fc]  to-[#f8fafc] py-[100px]'>
       <Container>
-        {/* {
+        {
         CheckOutData.lengh === 0 &&(
         <div className='py-[150px] mx-[60px]'>
           <div className='mb-[50px] shadow-2xl shodow-gray-700'>
@@ -21,7 +21,8 @@ const CheckOut = () => {
           <button className='hover:-translate-y-[10px] duration-300 ease-in-out'><a href="" className='text-white py-[13px] px-[30px] bg-black text-[17px] '>Return To Shop</a></button>
         </div>
         )
-      } */}
+      }
+
 
         <div className='px-[100px]  max-md:px-[20px] '>
           <div className='bg-white p-[20px] max-md:p-[15px] mb-[12px] text-[#565656] shadow-2xl shodow-gray-700'>
@@ -101,19 +102,23 @@ const CheckOut = () => {
               <div>
                 {
                   CheckOutData.flat().map((item) => {
-                    return (
-                      <div key={item.id} className='flex justify-between'>
-                        <div className='item-center'>
-                          <div>
-                            <img src={item.img} alt="" />
+               return (
+                      <div key={item.id} >
+                      <div className='flex justify-between my-[20px]'>
+                        <div className=' flex items-center justify-between w-[100%]'>
+                          <div className='flex items-center me-auto'>
+                            <div className='me-[12px]' >
+                              <img src={item.img} alt="" className='h-24 w-24' />
+                            </div>
+                            <div className=''>
+                              <div>{item.name}</div>
+                              <div className='font-bold'>${item.price * item.quantity}.00</div>
+                            </div>
                           </div>
-                          <div>
-                            <div>{item.name}</div>
-                            <div className='font-bold'>{item.price}</div>
-                          </div>
+                          <div className='ms-auto'>QTY {item.quantity}</div>
                         </div>
-                        <div>QTY {item.quantity}</div>
-                        <hr />
+                      </div>
+                          <hr />
                       </div>
                     )
                   })
@@ -121,33 +126,34 @@ const CheckOut = () => {
                 <div>
                   <div className='flex justify-between mt-[15px] mb-[50px]'>
                     <span>SubTotal</span>
-                    <span className='font-bold'>${ProductAmount}</span>
+                    <span className='font-bold'>${ProductAmount}.00</span>
                   </div>
                   <div className='flex justify-between my-[50px]'>
-                    <span>Shpping<br/>Flat Rate:</span>
+                    <span>Shpping<br />Flat Rate:</span>
                     <span>$10.00</span>
                   </div>
-                  <hr/>
+                  <hr />
                   <div className='flex justify-between my-[30px]'>
                     <span>Total</span>
-                    <span className='font-bold'>${FinalTotal}</span>
+                    <span className='font-bold'>${FinalTotal}.00</span>
                   </div>
-              </div>
+                </div>
 
                 <p className='my-[15px]'>Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.</p>
-                </div>
-                <hr/>
-                <p className='text-[12px] mt-[10px] mb-[20px]'>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
-                <div className='w-[100%] hover:-translate-y-[10px] duration-300 ease-in-out max-md:w-[100%] flex justify-center text-white py-[15px] px-[30px] bg-black text-[17px]   checkout hover:border-2 hover:border-black'>
+              </div>
+              <hr />
+              <p className='text-[12px] mt-[10px] mb-[20px]'>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+              <div className='w-[100%] hover:-translate-y-[10px] duration-300 ease-in-out max-md:w-[100%] flex justify-center text-white py-[15px] px-[30px] bg-black text-[17px]   checkout hover:border-2 hover:border-black'>
                 <button>
-                        order Place
-                    </button>
-                </div>
+                  order Place
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </Container>
     </div>
+    </>
   )
 }
 export default CheckOut
