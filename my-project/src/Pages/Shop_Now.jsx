@@ -126,8 +126,8 @@ const Shop_Now = () => {
                     <div className='text-center leading-10 px-[12px] py-[23px] max-md:px-0 max-sm:py-[15px]'>
                       <h5>{item.name}</h5>
                       <p className='text-muted '>
-                        <del className='pr-[8px]'>${item.d_price}</del>
-                        <span>${item.price}</span>
+                        <del className='pr-[8px]'>${item.d_price}.00</del>
+                        <span>${item.price}.00</span>
                       </p>
                     </div>
                   </div>

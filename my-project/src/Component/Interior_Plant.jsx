@@ -33,7 +33,7 @@ const Interior_Plant = () => {
             <section className='w-[57%] pl-5 max-md:block max-md:w-[100%] max-md:p-0 '>
               <div className='flex flex-wrap row '>
                 {
-                  data.flat().slice(6 , 11).map((item) => {
+                  data.flat().slice(6 , 12).map((item) => {
                     return (
                       
                         <div key={item.id} className='col-6 col-md-4 px-2 col-xs-6 relative' >

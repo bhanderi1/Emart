@@ -67,8 +67,8 @@ const Wishlist = () => {
                     </div>
 
                     <div className="col-3 flex text-wrap justify-center max-md:w-auto max-md:justify-start">
-                      <del className="pr-[12px]">{item.d_price}</del>
-                      <span>{item.price}-20%</span>
+                      <del className="pr-[12px]">{item.d_price}.00</del>
+                      <span>{item.price}.00-20%</span>
                     </div>
 
                     <div className="col-2 items-center flex justify-center text-wrap max-md:w-auto max-md:justify-start">
