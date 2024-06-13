@@ -1,10 +1,10 @@
 import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import { useSelector, useDispatch } from "react-redux";
-import { useState } from "react";
 import { decrement, increment, removeToCart } from "../Product_Data/Redux/Action";
 import { NavLink } from 'react-router-dom';
-import { productData } from "../Product_Data/ProductRedux/ProductAction";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Cart = () => {
 
@@ -17,6 +17,21 @@ const Cart = () => {
   const FinalTotal = ProductAmount+10
 
   const ShippingRate = 1500-FinalTotal
+
+  const RemovetoCart = (item) =>{
+    dispatch(removeToCart(item.id)),
+    toast.error('Item Remove To the List.', {
+      position: "bottom-right",
+      autoClose: 3000,
+      // hideProgressBar: false,
+      // closeOnClick: true,
+      // pauseOnHover: true,
+      // draggable: true,
+      // progress: undefined,
+      // theme: "light",
+      // transition: Bounce,
+      });
+  }
 
   return (
     <>
@@ -61,7 +76,7 @@ const Cart = () => {
                   <div key={item.id}>
                     <div className="flex justify-betweenpt-[30px] items-center py-[30px] max-md:block max-md:leading-10">
                       <div className="flex col-6 items-center pl-[20px] max-md:p-0 max-md:block max-md:w-auto max-md:leading-10">
-                        <button onClick={()=> dispatch(removeToCart(item.id))} className="flex max-md:justify-start max-md:px-[8px] max-md:pb-[15px]">
+                        <button onClick={() =>RemovetoCart(item)} className="flex max-md:justify-start max-md:px-[8px] max-md:pb-[15px]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
                         </button>
                         <img
@@ -125,6 +140,7 @@ const Cart = () => {
           </div> )
            }
         </Container>
+        <ToastContainer/>
       </div>
     </>
   );
