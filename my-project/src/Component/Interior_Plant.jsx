@@ -6,6 +6,8 @@ import Cart from '../assets/Cart.svg'
 import { addToCart, addTowishlist } from '../Product_Data/Redux/Action'
 import { useDispatch, useSelector } from 'react-redux'
 import { productData } from '../Product_Data/ProductRedux/ProductAction'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Interior_Plant = () => {
   const dispatch = useDispatch()
@@ -14,6 +16,22 @@ const Interior_Plant = () => {
   useEffect(() => {
     dispatch(productData())
   }, [])
+
+  const AddWishlist = (item) => {
+    dispatch(addTowishlist(item)),
+      toast.success('Successfully Add Item To WishList', {
+        position: "bottom-right",
+        autoClose: 3000,
+      });
+  }
+
+  const AddCartList = (item) => {
+    dispatch(addToCart(item)),
+      toast.success('Successfully Add Item To Cart', {
+        position: "bottom-right",
+        autoClose: 3000,
+      });
+  }
 
   return (
     <div className='continer flex justify-center py-[40px] max-xl:p-0 overflow-hidden'>
@@ -33,46 +51,44 @@ const Interior_Plant = () => {
             <section className='w-[57%] pl-5 max-md:block max-md:w-[100%] max-md:p-0 '>
               <div className='flex flex-wrap row '>
                 {
-                  data.flat().slice(6 , 12).map((item) => {
+                  data.flat().slice(6, 12).map((item) => {
                     return (
-                      
-                        <div key={item.id} className='col-6 col-md-4 px-2 col-xs-6 relative' >
-                          <div className='absolute right-5 top-3 z-1 max-md:hidden'>
-                            <span className='text-white bg-black px-2'>{item.discount}</span>
+                      <div key={item.id} className='col-6 col-md-4 px-2 col-xs-6 relative' >
+                        <div className='absolute right-5 top-3 z-1 max-md:hidden'>
+                          <span className='text-white bg-black px-2'>{item.discount}</span>
+                        </div>
+                        <div className='relative primary-img'>
+                          <div className='overflow-hidden relative'>
+                            <img decoding="async" loading="lazy" alt="custom-image" src={item.img} />
                           </div>
-                          <div className='relative primary-img'>
-                            <div className='overflow-hidden relative'>
-                              <img decoding="async" loading="lazy" alt="custom-image" src={item.img} />
-                            </div>
-                            <div className='absolute left-0 top-0 z-1 shop-icon'>
-                              <div className='p-3'>
-                                <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                                  <button onClick={() => dispatch(addTowishlist(item))}>
-                                    <img src={heart} alt="" height={16} width={16} />
-                                  </button>
-                                </div>
-                                <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                                  <button>
-                                    <img src={Eyes} alt="" height={16} width={16} />
-                                  </button>
-                                </div>
-                                <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
-                                  <button onClick={() => dispatch(addToCart(item))}>
-                                    <img src={Cart} alt="" height={8} width={12} />
-                                  </button>
-                                </div>
+                          <div className='absolute left-0 top-0 z-1 shop-icon'>
+                            <div className='p-3'>
+                              <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                                <button onClick={() => AddWishlist(item)}>
+                                  <img src={heart} alt="" height={16} width={16} />
+                                </button>
+                              </div>
+                              <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                                <button>
+                                  <img src={Eyes} alt="" height={16} width={16} />
+                                </button>
+                              </div>
+                              <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
+                                <button onClick={() => AddCartList(item)}>
+                                  <img src={Cart} alt="" height={8} width={12} />
+                                </button>
                               </div>
                             </div>
                           </div>
-                          <div className='text-center leading-10 px-[12px] py-[23px] max-md:px-0 max-sm:py-[20px]'>
-                            <h5>{item.name}</h5>
-                            <p className='text-muted '>
-                              <del className='pr-[8px]'>${item.d_price}</del>
-                              <span>${item.price}</span>
-                            </p>
-                          </div>
                         </div>
-                      
+                        <div className='text-center leading-10 px-[12px] py-[23px] max-md:px-0 max-sm:py-[20px]'>
+                          <h5>{item.name}</h5>
+                          <p className='text-muted '>
+                            <del className='pr-[8px]'>${item.d_price}</del>
+                            <span>${item.price}</span>
+                          </p>
+                        </div>
+                      </div>
                     )
                   })
                 }
@@ -81,6 +97,7 @@ const Interior_Plant = () => {
           </section>
         </div>
       </Container>
+      <ToastContainer />
     </div>
   )
 }

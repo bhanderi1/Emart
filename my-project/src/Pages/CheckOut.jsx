@@ -3,6 +3,7 @@ import Container from "react-bootstrap/esm/Container";
 import { useSelector } from 'react-redux';
 import * as yup from 'yup'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { NavLink } from 'react-router-dom';
 
 const initialValues = {
   firstname: '',
@@ -24,18 +25,17 @@ const onSubmit = values => {
 
 const validationSchema = yup.object({
   firstname: yup.string().required("First Name is required"),
-  lastname: yup.string().required("Last Name is Requied"),
-  CompanyName: yup.string().required("Company Name is Requied"),
-  Country: yup.string().required("Country Name is Requied"),
-  Address: yup.string().required("Address Name is Requied"),
-  Apartment: yup.string().required("Apartment Name is Requied"),
-  City: yup.string().required("city is Requied"),
-  State: yup.string().required("state is Requied"),
-  PostCode: yup.string().required("PostCode/Zip is Requied"),
-  Phone: yup.string().required("Pnone Number is Requied"),
+  lastname: yup.string().required("Last Name is Required"),
+  CompanyName: yup.string().required("Company Name is Required"),
+  Country: yup.string().required("Country Name is Required"),
+  Address: yup.string().required("Address Name is Required"),
+  Apartment: yup.string().required("Apartment Name is Required"),
+  City: yup.string().required("city is Required"),
+  State: yup.string().required("state is Required"),
+  PostCode: yup.string().required("PostCode/Zip is Required"),
+  Phone: yup.string().required("Pnone Number is Required"),
   Email: yup.string().email('invalid address').required("Email is Required")
 })
-
 
 
 const CheckOut = () => {
@@ -61,7 +61,6 @@ const CheckOut = () => {
           }
           {
             CheckOutData.length >= 1 && (
-
               <div className='px-[100px]  max-md:px-[20px] '>
                 <div className='bg-white p-[20px] max-md:p-[15px] mb-[12px] text-[#565656] shadow-2xl shodow-gray-700'>
                   <span>Returning Customer? Click here to login</span>
@@ -69,66 +68,87 @@ const CheckOut = () => {
                 <div className='bg-white p-[20px] max-md:p-[10px] text-[#565656] mb-[12px] shadow-2xl shodow-gray-700'>
                   <span>Have a Coupon? Click here to enter your code</span>
                 </div>
-
-                  <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
-                    <Form>
-                <div className='flex justify-between max-xl:block'>
+                <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
+                  <Form>
+                    <div className='flex justify-between max-xl:block'>
                       <div className='w-[65%] p-[20px] bg-white shadow-2xl shodow-gray-700 max-xl:w-[100%]'>
                         <h1 className='text-[22px] mb-[12px]'>Billing Details</h1>
                         <div className='flex justify-between max-xl:block'>
-                          <div className='py-[10px] border-[1px] border-[#d9d9d9] ps-[10px] mb-[15px] w-[48%] max-xl:w-[100%]'>
-                            <Field type="text" placeholder='First Name' name="firstname" id="firstname" className='text-black border-none outline-none w-[100%]' />
-                            <ErrorMessage name='firstname' className="text-red-500"></ErrorMessage>
+                          <div className='w-[48%] max-xl:w-[100%] mb-[15px]'>
+                            <Field type="text" placeholder='First Name' name="firstname" id="firstname" className='text-black py-[10px] border-[1px] border-[#d9d9d9] ps-[10px] outline-none w-[100%]' />
+                            <span className='text-red-600'>
+                              <ErrorMessage name='firstname'></ErrorMessage>
+                            </span>
                           </div>
-                          <div className='py-[10px] border-[1px] border-[#d9d9d9] ps-[10px] mb-[15px] w-[48%] max-xl:w-[100%]'>
-                            <Field type="text" placeholder='Last Name' name="firstname" id="firstname" className='text-black border-none outline-none w-[100%]' />
-                            <ErrorMessage name='lastname' className="text-red-500"></ErrorMessage>
+                          <div className='w-[48%] max-xl:w-[100%] mb-[15px]'>
+                            <Field type="text" placeholder='Last Name' name="firstname" id="firstname" className='text-black py-[10px] border-[1px] border-[#d9d9d9] ps-[10px]  outline-none w-[100%]' />
+                            <span className='text-red-600'>
+                              <ErrorMessage name='lastname'></ErrorMessage>
+                            </span>
                           </div>
                         </div>
 
-                        <div className='py-[10px] border-[1px] border-[#d9d9d9] ps-[10px] mb-[15px]  '>
-                          <Field type="text" placeholder='Company Name' name="lastname" id="lastname" className='text-black border-none outline-none w-[100%]' />
-                          <ErrorMessage name='CompanyName' className="text-red-500"></ErrorMessage>
+                        <div className='mb-[15px]'>
+                          <Field type="text" placeholder='Company Name' name="lastname" id="lastname" className='text-black py-[10px] border-[1px] border-[#d9d9d9] ps-[10px]  outline-none w-[100%]' />
+                          <span className='text-red-600'>
+                            <ErrorMessage name='CompanyName'></ErrorMessage>
+                          </span>
                         </div>
 
-                        <div className='py-[10px] border-[1px] border-[#d9d9d9] ps-[10px] mb-[15px]  '>
-                          <Field type="text" placeholder='Country' name="Country" id="Country" className='text-black border-none outline-none w-[100%]' />
-                          <ErrorMessage name='Country' className="text-red-500"></ErrorMessage>
+                        <div className='mb-[15px]'>
+                          <Field type="text" placeholder='Country' name="Country" id="Country" className='text-black py-[10px] border-[1px] border-[#d9d9d9] ps-[10px] outline-none w-[100%]' />
+                          <span className='text-red-600'>
+                            <ErrorMessage name='Country'></ErrorMessage>
+                          </span>
                         </div>
 
-                        <div className='py-[10px] border-[1px] border-[#d9d9d9] ps-[10px] mb-[15px]  '>
-                          <Field type="text" placeholder='Addrees' name="Addrees" id="Addrees" className='text-black border-none outline-none w-[100%]' />
-                          <ErrorMessage name='Address' className="text-red-500"></ErrorMessage>
+                        <div className='mb-[15px]'>
+                          <Field type="text" placeholder='Addrees' name="Addrees" id="Addrees" className='text-black py-[10px] border-[1px] border-[#d9d9d9] ps-[10px]  outline-none w-[100%]' />
+                          <span className='text-red-600'>
+                            <ErrorMessage name='Address'></ErrorMessage>
+                          </span>
                         </div>
 
-                        <div className='py-[10px] border-[1px] border-[#d9d9d9] ps-[10px] mb-[15px]  '>
-                          <Field type="text" placeholder='Apartment,suite,unit,etc. (optional)' name="Apartment" id="Apartment" className='text-black border-none outline-none w-[100%]' />
-                          <ErrorMessage name='Apartment' className="text-red-500"></ErrorMessage>
+                        <div className='mb-[15px]'>
+                          <Field type="text" placeholder='Apartment,suite,unit,etc. (optional)' name="Apartment" id="Apartment" className='text-black py-[10px] border-[1px] border-[#d9d9d9] ps-[10px]  outline-none w-[100%]' />
+                          <span className='text-red-600'>
+                            <ErrorMessage name='Apartment'></ErrorMessage>
+                          </span>
                         </div>
 
-                        <div className='py-[10px] border-[1px] border-[#d9d9d9] ps-[10px] mb-[15px]  '>
-                          <Field type="text" placeholder='City' name="City" id="City" className='text-black border-none outline-none w-[100%]' />
-                          <ErrorMessage name='City' className="text-red-500"></ErrorMessage>
+                        <div className='mb-[15px]'>
+                          <Field type="text" placeholder='City' name="City" id="City" className='text-black py-[10px] border-[1px] border-[#d9d9d9] ps-[10px]  outline-none w-[100%]' />
+                          <span className='text-red-600'>
+                            <ErrorMessage name='City'></ErrorMessage>
+                          </span>
                         </div>
 
-                        <div className='py-[10px] border-[1px] border-[#d9d9d9] ps-[10px] mb-[15px]  '>
-                          <Field type="text" placeholder='State' name="State" id="State" className='text-black border-none outline-none w-[100%]' />
-                          <ErrorMessage name='State' className="text-red-500"></ErrorMessage>
+                        <div className='mb-[15px]'>
+                          <Field type="text" placeholder='State' name="State" id="State" className='text-black py-[10px] border-[1px] border-[#d9d9d9] ps-[10px]  outline-none w-[100%]' />
+                          <span className='text-red-600'>
+                            <ErrorMessage name='State'></ErrorMessage>
+                          </span>
                         </div>
 
-                        <div className='py-[10px] border-[1px] border-[#d9d9d9] ps-[10px] mb-[15px]  '>
-                          <Field type="postal" placeholder='PostCode/Zip' name="PostCode" id="PostCode" className='text-black border-none outline-none w-[100%]' />
-                          <ErrorMessage name='PostCode' className="text-red-500"></ErrorMessage>
+                        <div className='mb-[15px]'>
+                          <Field type="postal" placeholder='PostCode/Zip' name="PostCode" id="PostCode" className='text-black py-[10px] border-[1px] border-[#d9d9d9] ps-[10px]  outline-none w-[100%]' />
+                          <span className='text-red-600'>
+                            <ErrorMessage name='PostCode'></ErrorMessage>
+                          </span>
                         </div>
 
-                        <div className='py-[10px] border-[1px] border-[#d9d9d9] ps-[10px] mb-[15px]  '>
-                          <Field type="tel" placeholder='Phone' name="Phone" id="Phone" className='text-black border-none outline-none w-[100%]' />
-                          <ErrorMessage name='Phone' className="text-red-500"></ErrorMessage>
+                        <div className='mb-[15px]'>
+                          <Field type="tel" placeholder='Phone' name="Phone" id="Phone" className='text-black py-[10px] border-[1px] border-[#d9d9d9] ps-[10px]  outline-none w-[100%]' />
+                          <span className='text-red-600'>
+                            <ErrorMessage name='Phone'></ErrorMessage>
+                          </span>
                         </div>
 
-                        <div className='py-[10px] border-[1px] border-[#d9d9d9] ps-[10px] mb-[15px]  '>
-                          <Field type="email" placeholder='Email Address' name="email" id="email" className='text-black border-none outline-none w-[100%]' />
-                          <ErrorMessage name='Email' className="text-red-500"></ErrorMessage>
+                        <div className='mb-[15px]'>
+                          <Field type="email" placeholder='Email Address' name="email" id="email" className='text-black py-[10px] border-[1px] border-[#d9d9d9] ps-[10px]  outline-none w-[100%]' />
+                          <span className='text-red-600'>
+                            <ErrorMessage name='Email'></ErrorMessage>
+                          </span>
                         </div>
 
                         <div className='mb-[15px]'>
@@ -140,8 +160,6 @@ const CheckOut = () => {
                           <textarea name="" id="" className='w-[100%] outline-none min-h-[100px]' placeholder='Notes about your order,e.g.special notes for delivery.'></textarea>
                         </div>
                       </div>
-
-
 
                       <div className='w-[30%] p-[20px] bg-white shadow-2xl shodow-gray-700 max-xl:w-[100%] max-xl:mt-[30px] pb-[40px]'>
                         <h1 className='text-[25px] mb-[12px]'>Your Order</h1>
@@ -157,7 +175,7 @@ const CheckOut = () => {
                                         <div className='me-[12px]' >
                                           <img src={item.img} alt="" className='h-24 w-24' />
                                         </div>
-                                        <div className=''>
+                                        <div className='mb-[15px]'>
                                           <div>{item.name}</div>
                                           <div className='font-bold'>${item.price * item.quantity}.00</div>
                                         </div>
@@ -190,11 +208,21 @@ const CheckOut = () => {
                         </div>
                         <hr />
                         <p className='text-[12px] mt-[10px] mb-[20px]'>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
-                          <button className='w-full'>
-                        <div className='w-[100%] hover:-translate-y-[10px] duration-300 ease-in-out max-md:w-[100%] flex justify-center text-white py-[15px] px-[30px] bg-black text-[17px]   checkout hover:border-2 hover:border-black'>
+                        <NavLink to='/payment'>
+                        <button className='w-full mb-[20px]'>
+                          <div className='w-[100%] hover:-translate-y-[10px] duration-300 ease-in-out max-md:w-[100%] flex justify-center text-white py-[15px] px-[30px] bg-black text-[17px] checkout hover:border-2 hover:border-black'>
                             order Place
-                        </div>
-                          </button>
+                          </div>
+                        </button>
+                        </NavLink>
+
+                      <NavLink to='/shop_now'>
+                        <button className='w-full'>
+                          <div className='w-[100%] hover:-translate-y-[10px] duration-300 ease-in-out max-md:w-[100%] flex justify-center text-white py-[15px] px-[30px] bg-black text-[17px] checkout hover:border-2 hover:border-black'>
+                            Return To Shop
+                          </div>
+                        </button>
+                      </NavLink>
                       </div>
                     </div>
                   </Form>

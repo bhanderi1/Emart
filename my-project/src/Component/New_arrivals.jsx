@@ -6,7 +6,8 @@ import Cart from '../assets/Cart.svg'
 import { useDispatch, useSelector } from 'react-redux'
 import { productData } from '../Product_Data/ProductRedux/ProductAction'
 import { addToCart, addTowishlist } from '../Product_Data/Redux/Action'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const New_arrivals = () => {
     const dispatch = useDispatch()
@@ -16,7 +17,21 @@ const New_arrivals = () => {
         dispatch(productData())
     }, [])
 
-    
+    const AddWishlist = (item) => {
+        dispatch(addTowishlist(item)),
+            toast.success('Successfully Add Item To WishList', {
+                position: "bottom-right",
+                autoClose: 3000,
+            });
+    }
+
+    const AddCartList = (item) => {
+        dispatch(addToCart(item)),
+            toast.success('Successfully Add Item To Cart', {
+                position: "bottom-right",
+                autoClose: 3000,
+            });
+    }
 
     return (
         <div className='continer flex justify-center py-[50px] max-xl:p-0'>
@@ -45,7 +60,7 @@ const New_arrivals = () => {
                                             <div className='absolute left-0 top-0 z-1 shop-icon'>
                                                 <div className='p-4'>
                                                     <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                                                        <button onClick={() => dispatch(addTowishlist(item))}>
+                                                        <button onClick={() => AddWishlist(item)}>
                                                             <img src={heart} alt="" height={16} width={16} />
                                                         </button>
                                                     </div>
@@ -55,7 +70,7 @@ const New_arrivals = () => {
                                                         </button>
                                                     </div>
                                                     <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
-                                                        <button onClick={() => dispatch(addToCart(item))}>
+                                                        <button onClick={() => AddCartList(item)}>
                                                             <img src={Cart} alt="" height={8} width={12} />
                                                         </button>
                                                     </div>
@@ -77,6 +92,7 @@ const New_arrivals = () => {
                     </div>
                 </section>
             </Container>
+            <ToastContainer />
         </div>
     )
 }

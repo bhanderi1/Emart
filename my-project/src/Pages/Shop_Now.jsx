@@ -7,6 +7,8 @@ import { productData } from '../Product_Data/ProductRedux/ProductAction'
 import heart from '../assets/heart.svg'
 import Eyes from '../assets/Eyes.svg'
 import Cart from '../assets/Cart.svg'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Shop_Now = () => {
   const dispatch = useDispatch()
@@ -16,6 +18,22 @@ const Shop_Now = () => {
   useEffect(() => {
     dispatch(productData())
   }, [])
+
+  const AddWishlist = (item) =>{
+    dispatch(addTowishlist(item)),
+    toast.success('Successfully Add Item To WishList', {
+      position: "bottom-right",
+      autoClose: 3000,
+    });
+  }
+
+  const AddCartList = (item) =>{
+    dispatch(addToCart(item)),
+    toast.success('Successfully Add Item To Cart', {
+      position: "bottom-right",
+      autoClose: 3000,
+    });
+  }
 
   return (
     <div className='pt-[70px]'>
@@ -105,7 +123,7 @@ const Shop_Now = () => {
                         <div className='p-4'>
                           <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
                             <button
-                              onClick={() => dispatch(addTowishlist(item))}
+                              onClick={() => AddWishlist(item)}
                             >
                               <img src={heart} alt="" height={16} width={16} />
                             </button>
@@ -116,7 +134,7 @@ const Shop_Now = () => {
                             </button>
                           </div>
                           <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1 ' >
-                            <button onClick={() => dispatch(addToCart(item))}>
+                            <button onClick={() => AddCartList(item)}>
                               <img src={Cart} alt="" height={8} width={12} />
                             </button>
                           </div>
@@ -135,8 +153,8 @@ const Shop_Now = () => {
             })}
           </div>
         </div>
-
       </Container>
+      <ToastContainer/>
     </div>
   )
 }
