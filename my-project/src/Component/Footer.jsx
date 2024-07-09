@@ -1,12 +1,4 @@
 import React from 'react'
-// import Visa from '../assets/Visa.svg'
-// import WebMoney from '../assets/WebMoney.svg'
-// import Maestro from '../assets/Maestro.svg'
-// import JCB from '../assets/JCB.svg'
-// import Discover from '../assets/Discover.svg'
-// import Experss from '../assets/Experss.svg'
-// import icon from '../assets/icon.svg'
-
 import Visa from '../assets/Visa.svg'
 import WebMoney from '../assets/WebMoney.svg'
 import Maestro from '../assets/Maestro.svg'

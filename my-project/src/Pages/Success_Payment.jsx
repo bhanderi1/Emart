@@ -56,5 +56,4 @@ const Success_Payment = () => {
         </div>
     )
 }
-
 export default Success_Payment
