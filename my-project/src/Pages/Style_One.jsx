@@ -46,7 +46,7 @@ const Style_One = () => {
       </div>
       <section className='max-md:block max-md:w-[100%] max-md:p-0 my-[80px] container '>
         <div className='flex flex-wrap m-auto col-xs-block'>
-       {data.flat().slice(0, 6).map((item) => {
+          {data.flat().slice(0, 6).map((item) => {
             return (
               <div className='col-6 col-lg-4 relative border-[20px] border-white Hover:shadow-2xl shadow-gray-700'>
                 <div className='absolute right-5  p-3 z-1 max-md:hidden'>
@@ -60,7 +60,7 @@ const Style_One = () => {
                   <div className='absolute left-0 top-0 z-1 shop-icon'>
                     <div className='p-3'>
                       <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                        <button onClick={() => AddWishlist(item)} >
+                        <button onClick={() => AddWishlist(item)}>
                           <img src={heart} alt="" height={16} width={16} />
                         </button>
                       </div>
@@ -89,7 +89,7 @@ const Style_One = () => {
           })}
         </div>
       </section>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   )
 }

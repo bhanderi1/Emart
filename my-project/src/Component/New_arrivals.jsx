@@ -42,7 +42,7 @@ const New_arrivals = () => {
                     </div>
                 </div>
 
-                <section className='max-md:block max-md:w-[100%] max-md:p-0 my-[30px] '>
+                <section className='max-md:block max-md:w-[100%] max-md:p-0 my-[30px]'>
                     <div className='flex row justify-between max-2xl:flex-wrap m-auto col-xs-block'>
                         {
                             data.flat().slice(6, 11).map((item) => {

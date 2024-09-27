@@ -14,7 +14,7 @@ import Shop_Now from './Pages/Shop_Now'
 import { BrowserRouter, Routes, Route, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Error_page from './Pages/Error_page'
 import Success_Payment from './Pages/Success_Payment'
-import SignInSignUp from './Pages/signup'
+
 const App = () => {
   // const router = 
 
@@ -35,9 +35,7 @@ const App = () => {
           <Route path='/shop_now' element={<Shop_Now/>}/>
           <Route path='/checkout' element={<CheckOut/>}/>
           <Route path='/payment' element={<Success_Payment/>}/>
-          <Route path='/signInSignUp' element={<SignInSignUp/>}/>
           <Route path='/*' element={<Error_page/>}/>
-          
         </Routes>
         <Footer />
       </BrowserRouter>

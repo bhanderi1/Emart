@@ -34,11 +34,11 @@ const Contact_Two = () => {
     console.log('form blur', formik.touched);
     return (
         <div>
-    <Container>
+            <Container>
                 <section className='flex justify-between max-xl:block '>
                     <div className='w-[48%] max-xl:w-auto'>
                         <div className='w-[100%] flex justify-center '>
-                            <img src="https://emart.wpthemedemos.com/wp-content/uploads/2023/03/contact-img-1.jpg" alt="" className='max-xl:h-[50vh] w-[100vw] max-md:h-auto object-cover'/>
+                            <img src="https://emart.wpthemedemos.com/wp-content/uploads/2023/03/contact-img-1.jpg" alt="" className='max-xl:h-[50vh] w-[100vw] max-md:h-auto object-cover' />
                         </div>
                     </div>
                     <div className='w-[48%] max-xl:w-auto flex justify-center'>
@@ -68,39 +68,38 @@ const Contact_Two = () => {
                                     </label>
                                     <form onSubmit={formik.handleSubmit}>
                                         <div className='border-[1px] border-[#d9d9d9] py-[10px] ps-[10px] mb-[15px]'>
-                                            <input type="text" name="firstname" id="firstname" values={formik.values.firstname} onChange={formik.handleChange} placeholder='Name' className='outline-none' onBlur={formik.handleBlur}/>
+                                            <input type="text" name="firstname" id="firstname" values={formik.values.firstname} onChange={formik.handleChange} placeholder='Name' className='outline-none' onBlur={formik.handleBlur} />
                                         </div>
-                                            {
-                                                formik.touched.firstname && formik.errors.firstname ? <div className='text-red-600'>{formik.errors.firstname}</div> : null
-                                            }
+                                        {
+                                            formik.touched.firstname && formik.errors.firstname ? <div className='text-red-600'>{formik.errors.firstname}</div> : null
+                                        }
                                         <div className='border-[1px] border-[#d9d9d9] py-[10px] ps-[10px] mb-[15px]'>
                                             <input type="email" name='email' id='email' value={formik.values.email} onChange={formik.handleChange} placeholder='Email' className='outline-none' onBlur={formik.handleBlur} />
                                         </div>
-                                            {
-                                                formik.touched.email && formik.errors.email ? <div className='text-red-600'>{formik.errors.email}</div> : null
-                                            }
+                                        {
+                                            formik.touched.email && formik.errors.email ? <div className='text-red-600'>{formik.errors.email}</div> : null
+                                        }
                                         <div className='border-[1px] border-[#d9d9d9] py-[10px] ps-[10px] mb-[15px]'>
-                                            <input type="tel" name="phone" id="phone" values={formik.values.phone} onChange={formik.handleChange} placeholder='Phone'  className='outline-none' onBlur={formik.handleBlur}/>
+                                            <input type="tel" name="phone" id="phone" values={formik.values.phone} onChange={formik.handleChange} placeholder='Phone' className='outline-none' onBlur={formik.handleBlur} />
                                         </div>
-                                            {
-                                                formik.touched.phone && formik.errors.phone ? <div className='text-red-600'>{formik.errors.phone}</div> : null
-                                            }
+                                        {
+                                            formik.touched.phone && formik.errors.phone ? <div className='text-red-600'>{formik.errors.phone}</div> : null
+                                        }
                                         <div >
-                                           <textarea name="Message" id="Message" rows={6} cols={40} value={formik.values.Message} onChange={formik.handleChange} placeholder='Message' className='outline-none border-[1px] border-[#d9d9d9] pt-[10px] ps-[10px] mb-[15px] w-[100%]' onBlur={formik.handleBlur}></textarea>
+                                            <textarea name="Message" id="Message" rows={6} cols={40} value={formik.values.Message} onChange={formik.handleChange} placeholder='Message' className='outline-none border-[1px] border-[#d9d9d9] pt-[10px] ps-[10px] mb-[15px] w-[100%]' onBlur={formik.handleBlur}></textarea>
                                         </div>
-                                           {
+                                        {
                                             formik.touched.Message && formik.errors.Message ? <div className='text-red-600'>{formik.errors.Message}</div> : null
-                                           }
+                                        }
                                         <button className='bg-black text-white w-full py-[15px] text-center'>Send Message</button>
                                     </form>
                                 </div>
                             </section>
                         </div>
-
                     </div>
                 </section>
-</Container>
-            </div>
+            </Container>
+        </div>
     )
 }
 

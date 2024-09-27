@@ -14,9 +14,11 @@ const Cart = () => {
 
   const ProductAmount = cartData.reduce((total,item)=> total + item.price * item.quantity,0)
 
-  const FinalTotal = ProductAmount+10
+  const shippingCost = 10; 
+  const freeShipping = 1500;
+  const FinalTotal = ProductAmount + shippingCost;
+  const ShippingRate = Math.max(freeShipping - FinalTotal, 0);
 
-  const ShippingRate = 1500-FinalTotal
 
   const RemovetoCart = (item) =>{
     dispatch(removeToCart(item.id)),
