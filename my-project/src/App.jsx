@@ -14,28 +14,30 @@ import Shop_Now from './Pages/Shop_Now'
 import { BrowserRouter, Routes, Route, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Error_page from './Pages/Error_page'
 import Success_Payment from './Pages/Success_Payment'
+import DisableInspect from './Component/DisableInspect'
 
 const App = () => {
   // const router = 
 
-  
+
   return (
     <div>
       <BrowserRouter>
         {/* <Navbar /> */}
         <Main_Navbar />
+        <DisableInspect />
         <Routes>
-          <Route path='/' element={<Home_page/>}/>
-          <Route path='styleOne' element={<Style_One/>}/>
-          <Route path='styleFour' element={<Style_Four/>}/>
-          <Route path='wishlist' element={<Wishlist/>}/>
-          <Route path='cart' element={<Cart/>}/>
-          <Route path='blog_three' element={<Blog_Three/>}/>
-          <Route path='contact_Two' element={<Contact_Two/>}/>   
-          <Route path='/shop_now' element={<Shop_Now/>}/>
-          <Route path='/checkout' element={<CheckOut/>}/>
-          <Route path='/payment' element={<Success_Payment/>}/>
-          <Route path='/*' element={<Error_page/>}/>
+          <Route path='/' element={<Home_page />} />
+          <Route path='styleOne' element={<Style_One />} />
+          <Route path='styleFour' element={<Style_Four />} />
+          <Route path='wishlist' element={<Wishlist />} />
+          <Route path='cart' element={<Cart />} />
+          <Route path='blog_three' element={<Blog_Three />} />
+          <Route path='contact_Two' element={<Contact_Two />} />
+          <Route path='/shop_now' element={<Shop_Now />} />
+          <Route path='/checkout' element={<CheckOut />} />
+          <Route path='/payment' element={<Success_Payment />} />
+          <Route path='/*' element={<Error_page />} />
         </Routes>
         <Footer />
       </BrowserRouter>
