@@ -27,7 +27,7 @@ const App = () => {
         <Route path='/' element={<Home_page />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
-        {/* <Route path='/style-one' element={<Style_One />} />
+        <Route path='/style-one' element={<Style_One />} />
         <Route path='/style-four' element={<Style_Four />} />
         <Route path='/wishlist' element={<Wishlist />} />
         <Route path='/cart' element={<Cart />} />
@@ -36,7 +36,7 @@ const App = () => {
         <Route path='/blog-three' element={<Blog_Three />} />
         <Route path='/contact-two' element={<Contact_Two />} />
         <Route path='/shop-now' element={<Shop_Now />} />
-        <Route path='*' element={<Error_page />} /> */}
+        <Route path='*' element={<Error_page />} />
       </Routes>
       <Footer />
     </BrowserRouter>
