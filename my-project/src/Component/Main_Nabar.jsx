@@ -520,7 +520,7 @@ function Main_Navbar() {
                 {/* shop */}
                 <NavDropdown
                   title={
-                    <div className="flex justify-between items-center drop font-semibold icon max-xl:border-b-[1px] translate-x-[718px]  max-xl:translate-x-0 shop-trans">
+                    <div className="flex justify-between items-center drop font-semibold icon max-xl:border-b-[1px] translate-x-[718px]    max-xl:translate-x-0">
                       Shop
                       <span>
                         <svg
@@ -546,10 +546,10 @@ function Main_Navbar() {
                   show={Shop}
                   onMouseEnter={Shopmouseenter}
                   onMouseLeave={Shoptmouseout}
-                  className="-translate-x-[718px] shop-trans-1"
+                  className="-translate-x-[718px]  max-xl:translate-x-0"
                 >
                   <div className="h-[1px] bg-[#c7c8cb] max-xl:hidden"></div>
-                  <section className="flex justify-evenly items-center w-screen max-xl:ml-0 max-xl:w-block max-xl:h-auto m-auto max-xl:border-b-[1px] max-xl:w-[320px] max-xl:justify-start">
+                  <section className="flex justify-evenly items-center w-screen max-xl:m-0 max-xl:w-block max-xl:h-auto m-auto max-xl:border-b-[1px] max-xl:w-[320px] max-xl:justify-start ">
                     <div className="flex max-xl:block ">
                       <div className="max-xl:ml-0  py-[60px] max-xl:p-0 pr-[60px] pl-[40px]">
                         <NavDropdown.Item
