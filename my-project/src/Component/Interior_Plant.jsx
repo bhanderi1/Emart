@@ -38,12 +38,15 @@ const Interior_Plant = () => {
       <Container>
         <div className='flex justify-center'>
           <div className='text-center'>
-            <h1 className='text-[42px] font-medium max-md:text-[30px]'>Best interior plants</h1>
-            <p className='pt-4 text-muted'>Rectangle follower library hand ellipse device strikethrough.</p>
+            <h1 className='text-[42px] font-medium max-lg:text-[30px]'>Best interior plants</h1>
+         <p className="pt-3 md:pt-4 text-muted text-[14px] sm:text-[14px] md:text-[14px]">
+  Rectangle follower library hand ellipse device strikethrough.
+</p>
+
           </div>
         </div>
-        <div className='max-sm:py-[30px] py-[50px]'>
-          <section className='flex max-md:block   m-auto justify-between overflow-hidden '>
+        <div className='max-lg:py-[30px] py-[50px]'>
+          <section className='flex max-md:block   m-auto justify-between '>
 
             <section className='w-[40%] max-md:w-[100%] max-md:mb-[20px] interior-img top-0 ms-2'>
               <img decoding="async" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plant-gallery-left-img.webp" alt="plant-gallery-left-img" loading="lazy" className="hover:-ms-[15px] duration-300 ease-in-out" />
@@ -53,27 +56,27 @@ const Interior_Plant = () => {
                 {
                   data.flat().slice(6, 12).map((item) => {
                     return (
-                      <div key={item.id} className='col-6 col-md-4 px-2 col-xs-6 relative' >
+                      <div key={item.id} className='col-6 col-md-4 px-1  col-xs-6 relative' >
                         <div className='absolute right-5 top-3 z-1 max-md:hidden'>
                           <span className='text-white bg-black px-2'>{item.discount}</span>
                         </div>
                         <div className='relative primary-img'>
                           <div className='overflow-hidden relative'>
-                            <img decoding="async" loading="lazy" alt="custom-image" src={item.img} />
+                            <img decoding="async" loading="lazy" alt="custom-image" src={item.img}  className='w-[100%]'/>
                           </div>
                           <div className='absolute left-0 top-0 z-1 shop-icon'>
-                            <div className='p-3'>
-                              <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                            <div className='md:p-2  sm:p-1'>
+                              <div className='sm:p-[12px] p-[7px] bg-white rounded-full m-2 flex justify-center icon-1'>
                                 <button onClick={() => AddWishlist(item)}>
                                   <img src={heart} alt="" height={16} width={16} />
                                 </button>
                               </div>
-                              <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
+                              <div className='sm:p-[12px] p-[7px] bg-white rounded-full m-2 flex justify-center icon-1'>
                                 <button>
                                   <img src={Eyes} alt="" height={16} width={16} />
                                 </button>
                               </div>
-                              <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1'>
+                              <div className='sm:p-[12px] p-[7px] flex justify-center bg-white m-2  rounded-full icon-1'>
                                 <button onClick={() => AddCartList(item)}>
                                   <img src={Cart} alt="" height={8} width={12} />
                                 </button>
@@ -81,7 +84,7 @@ const Interior_Plant = () => {
                             </div>
                           </div>
                         </div>
-                        <div className='text-center leading-10 px-[12px] py-[23px] max-md:px-0 max-sm:py-[20px]'>
+                        <div className='text-center leading-10 px-[12px] py-[23px] max-md:px-0 max-sm:py-[15px]'>
                           <h5>{item.name}</h5>
                           <p className='text-muted '>
                             <del className='pr-[8px]'>${item.d_price}</del>

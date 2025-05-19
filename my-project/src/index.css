@@ -121,6 +121,10 @@
   padding: 0;
 }
 
+.container {
+  max-width: 1440px;
+}
+
 .dropdown-toggle::after {
   display: none;
 }
@@ -162,9 +166,11 @@
 .dropdown-menu {
   animation: slidedown 400ms ease-in-out forwards;
 }
-.navbar-expand-xl .navbar-nav .dropdown-menu{
+
+.navbar-expand-xl .navbar-nav .dropdown-menu {
   margin-top: 10px;
 }
+
 @keyframes slidedown {
   0% {
     opacity: 0;
@@ -204,18 +210,20 @@
   transition: margin-top 200ms ease-out;
 }
 
-.up:hover{
+.up:hover {
   margin-top: -10px;
 }
+
 /*-----------------Interior Plant ---------------*/
-.primary-img:hover img{
+.primary-img:hover img {
   transform: scale(1.1);
 }
-.primary-img img{
-   transition: transform 1.5s ease-in-out;
+
+.primary-img img {
+  transition: transform 1.5s ease-in-out;
 }
 
-.primary-img:hover .shop-icon{
+.primary-img:hover .shop-icon {
   opacity: 1;
 }
 
@@ -235,32 +243,38 @@
   }
 }
 
-.shop-icon{
+.shop-icon {
   opacity: 0;
-} 
- .shop-icon:hover{
-  opacity: 1!important;
 }
+
+.shop-icon:hover {
+  opacity: 1 !important;
+}
+
 .icon-1:hover {
-  background-color: black!important;
+  background-color: black !important;
 }
-.icon-1:hover button{
-  filter: invert(100%) sepia(1);  
+
+.icon-1:hover button {
+  filter: invert(100%) sepia(1);
 }
+
 /* ---------------Gardening Tools-------------- */
-.shop-now:hover{
-  background-color: black!important;
-  color: white!important;
+.shop-now:hover {
+  background-color: black !important;
+  color: white !important;
 }
-.gardening{
+
+.gardening {
   height: inherit;
 }
+
 .form-select {
-  --bs-form-select-bg-img:none;
+  --bs-form-select-bg-img: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding:0;
+  padding: 0;
   background-color: none;
   background-image: none;
   background-repeat: no-repeat;
@@ -270,15 +284,99 @@
   border-radius: none;
   transition: none;
 }
+
 .form-select:focus {
   border-color: none;
   /* outline: 0; */
   box-shadow: none;
 }
-.checkout:hover{
-  background-color: white!important;
-  color: black!important;
+
+.checkout:hover {
+  background-color: white !important;
+  color: black !important;
 }
-.error{
-  color: rgb(218, 19, 19)!important;
+
+.error {
+  color: rgb(218, 19, 19) !important;
 }
+
+.navs {
+  margin-right: 50px;
+}
+
+
+@media(max-width:1532px) {
+  .navs {
+    margin-right: 7px;
+  }
+
+}
+
+
+@media(max-width:1400px) {
+  .navs {
+    margin-right: 30px;
+  }
+
+  /* .trans {
+    translate: 45px !important;
+  }
+
+  .trans-1 {
+    translate: -37px !important;
+  }
+
+  .shop-trans {
+    translate: 150px !important;
+  }
+
+  .shop-trans-1 {
+    translate: -150px !important;
+  } */
+
+}
+
+
+@media(max-width:1300px) {}
+
+
+
+@media(max-width:1200px) {
+  .navs {
+    margin-left: 0px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 992px !important;
+    max-width: 100%;
+    /* Or auto */
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .dropdown-menu {
+    border: 0px none;
+  }
+
+  .box-border {
+    border: 0px !important;
+    padding: 0px 0px !important;
+  }
+ 
+}
+
+
+@media (max-width: 992px) {}
+
+@media (max-width: 767px) {
+   .arrival-item{
+    padding: 0 4px !important  ;
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width:576px) {}
+
+@media (max-width:400px) {}

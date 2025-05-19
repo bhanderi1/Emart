@@ -14,16 +14,17 @@ const Footer = () => {
     <footer>
       <div className='h-[1px] bg-[#c7c8cb]'></div>
       <div>
-        <div className="flex pt-36 pb-36 px-65 max-xl:pt-20 max-xl:pb-20 max-xl:px-0 container ">
+        <div className="flex pt-36 pb-36 px-65 max-xl:pt-20 max-xl:pb-20 max-sm:pt-12 max-sm:pb-12 max-xl:px-0 container ">
           <div className="m-auto">
-            <div className='flex justify-center mb-10 max-sm:mb-6'>
+            <div className='flex justify-center mb-10 max-md:mb-4'>
               <svg xmlns="http://www.w3.org/2000/svg" width="52" height="42" viewBox="0 0 52 42" fill="none"><path d="M6.00098 1H46.001C48.751 1 51.001 3.25 51.001 6V36C51.001 38.75 48.751 41 46.001 41H6.00098C3.25098 41 1.00098 38.75 1.00098 36V6C1.00098 3.25 3.25098 1 6.00098 1Z" stroke="#333333" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path><path d="M51.001 6L26.001 23.5L1.00098 6" stroke="#333333" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
             </div>
             <div className="text-center">
-              <h1 className="text-5xl pb-12 max-xl:pb-6 max-md:text-2xl  max-lg:text-3xl">Subscribe newsletter</h1>
-              <span className="text-gray-500 max-sm:px-5 text-xl  max-lg:text-lg max-sm:text-base">
-                Subscribe Now and get more offers
-              </span>
+              <h1 className="text-5xl pb-12 max-xl:pb-6 max-md:pb-2 max-md:text-2xl  max-lg:text-3xl">Subscribe newsletter</h1>
+            <span className="text-gray-500 max-sm:px-5 text-xl max-lg:text-lg  max-md:text-sm">
+  Subscribe Now and get more offers
+</span>
+
             </div>
             <div className="flex pt-4 gap-3 justify-center max-md:block ">
               <div className='pt-4'>
@@ -31,11 +32,11 @@ const Footer = () => {
                   type="Email"
                   name="email"
                   placeholder="Your email adress..."
-                  className="bg-gray-200 text-black border-none outline-none py-3 px-5 w-[500px] max-md:w-[300px] max-md:ml-[10px]  "
+                  className="bg-gray-200 text-black border-none outline-none py-3 px-5 w-[500px] max-md:w-[300px] max-md:ml-0  "
                 />
               </div>
               <div className="pt-4 ">
-                <button className="bg-black text-white py-3  px-5 max-md:w-[300px] max-md:ml-[10px]">
+                <button className="bg-black text-white py-3  px-5 max-md:w-[300px] max-md:ml-0 max-md:px-2">
                   Subscribe Now
                 </button>
               </div>
@@ -71,7 +72,7 @@ const Footer = () => {
             </div>
             <div className='col flex justify-center max-sm:py-1'>
               <div className='flex'>
-              <span className="text-base text-gray-500">Designed by:<span className="font-bold">srushti</span></span>
+              <span className="text-base max-sm:text-[14px] text-gray-500">Designed by:<span className="font-bold">srushti</span></span>
               </div>
             </div>
             <div className="col flex justify-end max-sm:justify-center max-sm:py-1 ">

@@ -8,14 +8,14 @@ const Shop_by_Categories = () => {
         <div className='continer flex justify-center'>
             <Container className='pb-[30px] max-xl:pb-[20px] '>
                 <div className='flex justify-end max-xl:justify-start max-md:justify-center'>
-                    <h1 className='text-[45px] max-md:text-[33px] font-[Jost] '>
+                    <h1 className='text-[45px] max-lg:text-[33px] max-sm:text-[30px] font-[Jost] '>
                         Shop by Categories
                     </h1>
                 </div>
-                <section className='flex mt-[30px] overflow-hidden'>
-                    <div className='flex m-auto flex-wrap overflow-hidden'>
+                <section className='flex mt-[30px] overflow-hidden max-sm:mt-[20px]'>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
-                        <div className='p-3 grid col-md-6 col-xl-3 overflow-hidden'>
+                    <div className='sm:p-3 overflow-hidden p-2'>
                             <div className='overflow-hidden'>
                                 <div className='img-con up'>
                                     <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/hover-image-1st.webp" alt="" />
@@ -33,7 +33,7 @@ const Shop_by_Categories = () => {
                             </div>
                         </div>
 
-                        <div className='relative  p-3 grid col-md-6 col-xl-3'>
+                        <div className='relative  sm:p-3  p-2'>
                             <div className='overflow-hidden'>
                                 <div className='img-con up'>
                                     <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/hover-image-2nd.webp" alt="" />
@@ -51,7 +51,7 @@ const Shop_by_Categories = () => {
                             </div>
                         </div>
 
-                        <div className='relative p-3 grid col-md-6 col-xl-3'>
+                        <div className='relative sm:p-3  p-2'>
                             <div className='overflow-hidden'>
                                 <div className='img-con up'>
                                     <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/hover-image-3rd.webp" alt="" />
@@ -68,7 +68,7 @@ const Shop_by_Categories = () => {
                                 </div></div>
                         </div>
 
-                        <div className='relative p-3 grid col-md-6 col-xl-3'>
+                        <div className='relative sm:p-3  p-2'>
                             <div className='overflow-hidden'>
                                 <div className='img-con up'>
                                     <img src="	https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/hover-image-4th.webp" alt="" />
