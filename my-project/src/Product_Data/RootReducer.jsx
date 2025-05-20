@@ -8,7 +8,7 @@ const RootReducer = combineReducers({
   Reducer,
   WishlistReducer,
   ProductReducer,
-  auth: AuthReducer, // ⬅️ Add auth slice
+  AuthReducer, 
 });
 
 export default RootReducer;

@@ -8,27 +8,52 @@ import { productData } from '../Product_Data/ProductRedux/ProductAction';
 import { addToCart, addTowishlist } from '../Product_Data/Redux/Action';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const New_arrivals = () => {
+    const navigate = useNavigate();
+    const isAuthenticated = !!localStorage.getItem("token");
+    console.log("Authenticated:", isAuthenticated);
+
+
     const dispatch = useDispatch();
     const data = useSelector((state) => state.ProductReducer);
 
     useEffect(() => {
         dispatch(productData());
-    }, []);
+    }, [dispatch]);
+
 
     const AddWishlist = (item) => {
+        if (!isAuthenticated) {
+            toast.warning("Please login to add to wishlist.", {
+                position: "top-right",
+                autoClose: 2000,
+            });
+            setTimeout(() => navigate("/login"), 2000);
+            return;
+        }
+
         dispatch(addTowishlist(item));
-        toast.success('Successfully Added Item To Wishlist', {
-            position: 'bottom-right',
+        toast.success('Successfully added to wishlist', {
+            position: "bottom-right",
             autoClose: 3000,
         });
     };
 
     const AddCartList = (item) => {
+        if (!isAuthenticated) {
+            toast.warning("Please login to add to cart.", {
+                position: "top-right",
+                autoClose: 2000,
+            });
+            setTimeout(() => navigate("/login"), 2000);
+            return;
+        }
+
         dispatch(addToCart(item));
-        toast.success('Successfully Added Item To Cart', {
-            position: 'bottom-right',
+        toast.success('Successfully added to cart', {
+            position: "bottom-right",
             autoClose: 3000,
         });
     };
@@ -44,7 +69,7 @@ const New_arrivals = () => {
                     <div className="flex flex-wrap -mx-2">
                         {
                             data.flat().slice(6, 11).map((item) => (
-                             <div className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 sm:px-1 mb-7 sm:mb-2 relative arrival-item" key={item.id}>
+                                <div className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 sm:px-1 mb-7 sm:mb-2 relative arrival-item" key={item.id}>
 
 
                                     <div className="absolute right-5 top-3 z-10 max-md:hidden">

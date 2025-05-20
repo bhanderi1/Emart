@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -6,12 +7,25 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useAuth0 } from "@auth0/auth0-react";
-import { CiLogout } from "react-icons/ci";
 import Logo from '../assets/logo.webp'
+import { useNavigate } from "react-router-dom";
+import { logoutUser } from "../Product_Data/Auth/AuthAction";
+import { useDispatch } from "react-redux";
+
 
 function Main_Navbar() {
-  const { user,loginWithRedirect , isAuthenticated , logout} = useAuth0();
+  const dispatch = useDispatch();
+  const { currentUser, users } = useSelector((state) => state.AuthReducer);
+  const navigate = useNavigate();
+
+
+  const handleLogout = () => {
+    dispatch(logoutUser());
+    localStorage.removeItem("token");
+    localStorage.removeItem("currentUser");
+    navigate("/login");
+  };
+
 
   const result = useSelector((state) => state.Reducer);
   const WishList = useSelector((state) => state.WishlistReducer);
@@ -74,32 +88,35 @@ function Main_Navbar() {
             <NavLink to="/" className="max-xl:m-auto">
               <img
                 alt="logo"
-           src={Logo}
-                  className="w-[150px] max-xl:w-[140px] max-md:w-[120px] max-sm:w-[100px] "
+                src={Logo}
+                className="w-[150px] max-xl:w-[140px] max-md:w-[120px] max-sm:w-[100px] "
               />
             </NavLink>
           </Navbar.Brand>
-          <Navbar.Toggle
-            aria-controls="responsive-navbar-nav"
-            onClick={handleShow}
-            className="d-xl-none max-xl:order-1 max-sm:w-[70px] max-sm:justify-start max-sm:flex"
-          />
+          <div className="max-sm:w-[70px]">
+            <Navbar.Toggle
+              aria-controls="responsive-navbar-nav"
+              onClick={handleShow}
+              className="d-xl-none max-xl:order-1  max-sm:justify-start max-sm:flex"
+            />
+
+          </div>
           <Offcanvas show={show} onHide={handleClose} responsive="xl">
             <Offcanvas.Header closeButton>
               <Offcanvas.Title>
-                 <img
-                alt="logo"
-           src={Logo}
+                <img
+                  alt="logo"
+                  src={Logo}
                   className="w-[150px] max-xl:w-[140px] max-md:w-[120px] max-sm:w-[100px] "
-              />
+                />
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className="bg-white">
               <Nav className="flex justify-center  max-sm:me-1 navs">
                 {/* Demo */}
-                                <NavDropdown
+                <NavDropdown
                   title={
-                    <div className="flex justify-between items-center drop font-semibold icon max-xl:border-b-[1px] translate-x-[540px] trans max-xl:translate-x-0  overflow-hidden">
+                    <div className="flex justify-between items-center drop font-semibold icon max-xl:border-b-[1px] translate-x-[650px] trans max-xl:translate-x-0   trans overflow-hidden">
                       Demo
                       <span>
                         <svg
@@ -122,7 +139,7 @@ function Main_Navbar() {
                   show={demo}
                   onMouseEnter={mouseenter}
                   onMouseLeave={mouseout}
-                  className="-translate-x-[540px] max-xl:translate-x-0 trans-1"
+                  className="-translate-x-[650px] max-xl:translate-x-0 trans-1"
                 >
                   <div className="h-[1px] bg-[#c7c8cb] max-xl:hidden"></div>
                   <section className="flex justify-evenly max-xl:justify-between items-center w-screen h-[500px] max-xl:ml-0 max-xl:w-block max-xl:h-auto m-auto max-xl:border-b-[1px] mt-[12px]overflow-hidden">
@@ -312,7 +329,7 @@ function Main_Navbar() {
                 {/* Product */}
                 <NavDropdown
                   title={
-                    <div className="flex justify-between items-center drop font-semibold icon max-xl:border-b-[1px] max-xl:px-0 translate-x-[622px]  max-xl:translate-x-0">
+                    <div className="flex justify-between items-center drop font-semibold icon max-xl:border-b-[1px] max-xl:px-0 translate-x-[727px]  pro-trans max-xl:translate-x-0">
                       Product
                       <span>
                         <svg
@@ -338,7 +355,7 @@ function Main_Navbar() {
                   show={Product}
                   onMouseOver={Productmouseenter}
                   onMouseLeave={Productmouseout}
-                  className="-translate-x-[622px]  max-xl:translate-x-0"
+                  className="-translate-x-[727px]  max-xl:translate-x-0 pro-trans-1"
                 >
                   <div className="h-[1px] bg-[#c7c8cb] max-xl:hidden"></div>
                   <section className="w-screen flex max-xl:block items-center  max-xl:m-0 max-xl:w-auto max-xl:leading-6 m-auto max-xl:border-b-[1px] justify-evenly">
@@ -396,25 +413,25 @@ function Main_Navbar() {
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action22"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           <NavLink to="styleOne">Style One</NavLink>
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action22"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           Style Two
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action23"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           Style Three
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action24"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           <NavLink to="styleFour"> Style Four</NavLink>
                         </NavDropdown.Item>
@@ -440,26 +457,26 @@ function Main_Navbar() {
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action26"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           {" "}
                           Vertical Carousel{" "}
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action27"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           <NavLink to="carousal">Carousal</NavLink>
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action28"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           Horizontal Style
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action29"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           <NavLink to="gridStyle"> Grid Style</NavLink>
                         </NavDropdown.Item>
@@ -484,14 +501,14 @@ function Main_Navbar() {
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action31"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           {" "}
                           Simple Product{" "}
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action32"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           Variable Product
                         </NavDropdown.Item>
@@ -520,7 +537,7 @@ function Main_Navbar() {
                 {/* shop */}
                 <NavDropdown
                   title={
-                    <div className="flex justify-between items-center drop font-semibold icon max-xl:border-b-[1px] translate-x-[718px]    max-xl:translate-x-0">
+                    <div className="flex justify-between items-center drop font-semibold icon max-xl:border-b-[1px] translate-x-[827px]    max-xl:translate-x-0 shop-trans">
                       Shop
                       <span>
                         <svg
@@ -546,7 +563,7 @@ function Main_Navbar() {
                   show={Shop}
                   onMouseEnter={Shopmouseenter}
                   onMouseLeave={Shoptmouseout}
-                  className="-translate-x-[718px]  max-xl:translate-x-0"
+                  className="-translate-x-[827px]  max-xl:translate-x-0 shop-trans-1"
                 >
                   <div className="h-[1px] bg-[#c7c8cb] max-xl:hidden"></div>
                   <section className="flex justify-evenly items-center w-screen max-xl:m-0 max-xl:w-block max-xl:h-auto m-auto max-xl:border-b-[1px] max-xl:w-[320px] max-xl:justify-start ">
@@ -561,14 +578,14 @@ function Main_Navbar() {
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action34"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           {" "}
                           4 Column
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action35"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           {" "}
                           <NavLink to="col_Sidebar">
@@ -578,14 +595,14 @@ function Main_Navbar() {
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action36"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           {" "}
                           5 Column{" "}
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action37"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           {" "}
                           5 Column + Side bar
@@ -601,20 +618,20 @@ function Main_Navbar() {
                           </NavDropdown.Item>
                           <NavDropdown.Item
                             href="#action39"
-                            className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                            className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                           >
                             <NavLink to="wishlist"> Wishlist</NavLink>
                           </NavDropdown.Item>
                           <NavDropdown.Item
                             href="#action40"
-                            className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                            className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                           >
                             {" "}
                             <NavLink to="cart"> Cart </NavLink>
                           </NavDropdown.Item>
                           <NavDropdown.Item
                             href="#action41"
-                            className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                            className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                           >
                             {" "}
                             <NavLink to="/checkout">Checkout</NavLink>{" "}
@@ -634,21 +651,21 @@ function Main_Navbar() {
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action43"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           {" "}
                           Product Filter at Top
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action44"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           {" "}
                           Product Filter at Left
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action45"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           {" "}
                           Product Filter at Right
@@ -666,28 +683,28 @@ function Main_Navbar() {
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action47"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           {" "}
                           Shop Style One
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action48"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           {" "}
                           Shop Style Two
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action49"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           {" "}
                           Shop Style Three
                         </NavDropdown.Item>
                         <NavDropdown.Item
                           href="#action51"
-                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                          className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                         >
                           {" "}
                           Shop Style Four
@@ -765,27 +782,27 @@ function Main_Navbar() {
                   <div className="pl-[20px] pr-[130px] py-3 border-1 border-gray-300 max-xl:p-0 max-md:border-0 box-border ">
                     <NavDropdown.Item
                       href="#action52"
-                      className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                      className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                     >
                       {" "}
                       Default Blog{" "}
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       href="#action53"
-                      className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                      className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                     >
                       {" "}
                       Blog One{" "}
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       href="#action54"
-                      className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                      className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                     >
                       Blog Two
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       href="#action55"
-                      className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                      className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                     >
                       <NavLink to="blog_three">Blog Three</NavLink>
                     </NavDropdown.Item>
@@ -825,14 +842,14 @@ function Main_Navbar() {
                   <div className="pl-[20px] pr-[130px] py-3 border-1 border-gray-300 max-xl:p-0 box-border">
                     <NavDropdown.Item
                       href="#action56"
-                      className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                      className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                     >
                       {" "}
                       Contact One{" "}
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       href="#action57"
-                      className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] max-xl:text-[14px] max-xl:py-[4px]"
+                      className="text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out max-xl:text-[14px] max-xl:py-[4px] "
                     >
                       <NavLink to="contact_Two">Contact Two</NavLink>
                     </NavDropdown.Item>
@@ -864,7 +881,7 @@ function Main_Navbar() {
                 </a>
               </div>
 
-              <div className="max-xl:pr-0 ml-2  pr-2">
+              {/* <div className="max-xl:pr-0 ml-2  pr-2">
               {isAuthenticated && <span className="hidden">{user.name}</span>}
               {isAuthenticated ? (<button onClick={() => logout({logoutParams:{returnTo:window.location.origin}})}>
               <CiLogout /></button>
@@ -888,7 +905,77 @@ function Main_Navbar() {
               </button>
               )
               }
+              </div> */}
+
+              <div className="flex max-md:-mr-2 ml-2 max-xl:pr-0 pr-2 max-xl:w-[35px]">
+                {currentUser ? (
+                  <>
+                    {/* User Icon Button */}
+                    <div className="relative">
+                      <button
+                        onClick={() => navigate("/profile")}
+                        className="flex items-center"
+                        type="button"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="22"
+                          height="22"
+                          viewBox="0 0 26 26"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="feather feather-user"
+                        >
+                          <path d="M20 21v-2a4 4 0 0 0-4-4H10a4 4 0 0 0-4 4v2"></path>
+                          <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                      </button>
+                      <span className="font-medium text-gray-700 text-[10px] absolute text-center">
+                        {currentUser?.fname}
+                      </span>
+                    </div>
+
+
+                    {/* Dropdown Menu */}
+                    <div className="absolute top-full right-0 mt-1 hidden group-hover:block bg-white border rounded shadow-md min-w-[100px] z-10">
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleLogout();
+                        }}
+                        className="block w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-gray-100"
+                      >
+                        Logout
+                      </button>
+                    </div>
+                  </>
+                ) : users.length > 0 ? (
+                  // users exist but no currentUser → show Login button
+                  <button
+                    onClick={() => navigate("/login")}
+                    className="btn-login"
+                    type="button"
+                  >
+                    Login
+                  </button>
+                ) : (
+                  // no users → show Register button
+                  <button
+                    onClick={() => navigate("/register")}
+                    className="btn-register"
+                    type="button"
+                  >
+                    Register
+                  </button>
+                )}
               </div>
+
+
+
 
               <div className="max-xl:hidden ml-2 flex  max-xl:pr-0 pr-2 ">
                 <NavLink to="wishlist" className="flex ">
@@ -902,7 +989,7 @@ function Main_Navbar() {
                 </NavLink>
               </div>
 
-              <div className="flex max-md:-mr-2 ml-2 max-xl:pr-0 pr-2">
+              <div className="flex max-md:-mr-2 ml-2 max-xl:pr-0 pr-2 max-xl:w-[35px]">
                 <NavLink to="cart">
                   <span className="flex">
                     <svg

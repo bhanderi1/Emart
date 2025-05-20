@@ -25,11 +25,13 @@ const App = () => {
       <Main_Navbar />
       <Routes>
         <Route path='/' element={<Home_page />} />
+        <Route path='/wishlist' element={<Wishlist />} />
+    
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/style-one' element={<Style_One />} />
         <Route path='/style-four' element={<Style_Four />} />
-        <Route path='/wishlist' element={<Wishlist />} />
+
         <Route path='/cart' element={<Cart />} />
         <Route path='/checkout' element={<CheckOut />} />
         <Route path='/payment' element={<Success_Payment />} />
